@@ -1,0 +1,15 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Coating_StepsName"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="590" Height="170" Initialized="View_Initialized">
+
+    <vw:RadioButton x:Name="RBName" Width="580" Height="155" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource GBRadioButtonStyle}" Checked="RBName_Checked" SymbolMargin="15,0,0,0" >
+        <Grid>
+            <vw:TextVarOut x:Name="RName" Height="40" Width="250" LocalizableLabelText="@Rezeptverwaltung.lblName" Margin="0,10,105,0" HorizontalAlignment="Right"  VerticalAlignment="Top"  ValueChanged="name_ValueChanged"  BlinkBrush="{DynamicResource FP_Blue}" VariableName="__UNLINKED_BSTR" />
+            <vw:TextVarOut x:Name="RDescr" Height="40" Width="250" LocalizableLabelText="@Rezeptverwaltung.Text12" Margin="0,60,105,0" HorizontalAlignment="Right"  VerticalAlignment="Top" BlinkBrush="{DynamicResource FP_Blue}" VariableName="__UNLINKED_BSTR" />
+            <vw:Button x:Name="RDel" Width="90" Height="90"  Margin="0,10,10,0" Style="{DynamicResource FP_RedButton}" HorizontalAlignment="Right" VerticalAlignment="Top" LocalizableText="@Tasten.Entfernen" Click="RDel_Click" AuthorizationRight="CoatingProgramm"/>
+        </Grid>
+    </vw:RadioButton>
+</vw:View>

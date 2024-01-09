@@ -1,0 +1,56 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_LT"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        Width="800" Height="720" >
+
+    <Grid x:Name="LayoutRoot"  >
+        <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}"   Width="780" Height="700" HorizontalAlignment="Center" VerticalAlignment="Center"  LocalizableHeaderText="@Rezeptverwaltung.LTD.lblHebekippgeraet" >
+            <Grid>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Intervalle" LocalizableLabelText="@Rezeptverwaltung.LTD.lblIntervalle" UseRawValue="True" AuthorizationRight="Article"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Zeit senken" LocalizableLabelText="@Rezeptverwaltung.LTD.lblZeit_senken" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Article"/>
+                <vw:RadioButton x:Name="O1" IsChecked="True" Style="{DynamicResource GBRadioButtonStyle}"   Width="360" Height="155" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,0,0" LocalizableLabelText="@Rezeptverwaltung.LTD.lblDeckel_oeffnen1" >
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[1].Wartezeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblWartezeit" AuthorizationRight="Article"/>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[1].Einzeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblEinzeit" AuthorizationRight="Article"/>
+                    </Grid>
+                </vw:RadioButton>
+                <vw:RadioButton x:Name="O2" Style="{DynamicResource GBRadioButtonStyle}"   Width="360" Height="155" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,130,20,0" LocalizableLabelText="@Rezeptverwaltung.LTD.lblDeckel_oeffnen2">
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[2].Wartezeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblWartezeit" AuthorizationRight="Article"/>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[2].Einzeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblEinzeit" AuthorizationRight="Article"/>
+                    </Grid>
+                </vw:RadioButton>
+                <vw:RadioButton x:Name="O3" Style="{DynamicResource GBRadioButtonStyle}"   Width="360" Height="155" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,305,0,0" LocalizableLabelText="@Rezeptverwaltung.LTD.lblDeckel_oeffnen3">
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[3].Wartezeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblWartezeit" AuthorizationRight="Article"/>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[3].Einzeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblEinzeit" AuthorizationRight="Article"/>
+                    </Grid>
+                </vw:RadioButton>
+                <vw:RadioButton x:Name="O4" Style="{DynamicResource GBRadioButtonStyle}"   Width="360" Height="155" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,305,20,0" LocalizableLabelText="@Rezeptverwaltung.LTD.lblDeckel_oeffnen4">
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[4].Wartezeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblWartezeit" AuthorizationRight="Article"/>
+                        <vw:NumericVarIn Width="80" HorizontalAlignment="Right" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[4].Einzeit" LocalizableUnitText="@Einheiten.sek" Height="40" VerticalAlignment="Top" LocalizableLabelText="@Rezeptverwaltung.LTD.lblEinzeit" AuthorizationRight="Article"/>
+                    </Grid>
+                </vw:RadioButton>
+                <vw:RadioButton x:Name="O5" Style="{DynamicResource GBRadioButtonStyle}"   Width="360" Height="155" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,480,0,0" LocalizableLabelText="@Rezeptverwaltung.LTD.lblDeckel_oeffnen5" >
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[5].Wartezeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblWartezeit" AuthorizationRight="Article"/>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Hebekippgerät.Deckel öffnen[5].Einzeit" LocalizableUnitText="@Einheiten.sek" LocalizableLabelText="@Rezeptverwaltung.LTD.lblEinzeit" AuthorizationRight="Article"/>
+
+                    </Grid>
+                </vw:RadioButton>
+            </Grid>
+        </vw:GroupBox>
+
+
+
+
+       
+
+
+
+    </Grid>
+
+</vw:View>

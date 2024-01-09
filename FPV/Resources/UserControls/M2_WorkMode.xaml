@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="HMI.UserControls.M2_WorkMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        xmlns:con="clr-namespace:HMI.Converter"
+        Height="160" Width="210" Background="Transparent" Initialized="UserControl_Initialized">
+
+    <UserControl.Resources>
+        <con:IntToBlinkConverter x:Key="IntToBlinkConverter"/>
+        <con:IntToVisConverterOP x:Key="IntToVisConverterOP"/>
+    </UserControl.Resources >
+    <Grid  >
+        <Ellipse x:Name="BtnShadow1" Fill="Black"  Height="130" Width="150" Margin="0,15,60,15">
+            <Ellipse.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse x:Name="WorkingMode" Stroke="Black" Fill="#FF025502"  Height="130" Width="150" HorizontalAlignment="Left" StrokeThickness="2"/>
+        <vw:Label x:Name="lbl" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" Width="150" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDoubleClick="WorkingMode_MouseDoubleClick" PreviewTouchUp="WorkingMode_PreviewTouchUp" Margin="0,20" PreviewTouchDown="lbl_PreviewTouchDown" AuthorizationRight="OperatingMode"/>
+        <vw:Key x:Name="btnstart" Content="Start" HorizontalAlignment="left" VerticalAlignment="Top"  Height="70" Width="80" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" Click="Btnstart_Click" Margin="125,5,0,0" KeyMode="KeyMode" IsBlinkEnabled="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Beschichten Status an BP.Anzeige_Automatik_Start_Taster, Converter={StaticResource IntToBlinkConverter}}" AuthorizationRight="OperatingMode" IsEnabled="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Mobile Panel connected, Converter={StaticResource BoolToBlinkConverterDS}}">
+            <Button.Resources>
+                <Storyboard x:Key="flashAnimation" >
+                    <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="Color" To="#FF12C312" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever" />
+                </Storyboard>
+            </Button.Resources>
+            <vw:Button.Template>
+                <ControlTemplate TargetType="{x:Type vw:Key}">
+                    <Grid>
+                        <Ellipse x:Name="BtnShadow2" Fill="Black"  Height="70" Width="80" Margin="0">
+                            <Ellipse.Effect>
+                                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        <Ellipse x:Name="elips" Stroke="Black"   StrokeThickness="1" >
+                            <Ellipse.Fill>
+                                <SolidColorBrush x:Name="btnColor"  Color="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Beschichten Status an BP.Anzeige_Automatik_Start_Taster, Converter={StaticResource IntToColorConverter}}" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="elips"  Value="{DynamicResource FP_Gray}" />
+                            <Setter TargetName="BtnShadow2" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="IsBlinkEnabled" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Name="flash" Storyboard="{StaticResource flashAnimation}" />
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="flash"/>
+                            </Trigger.ExitActions>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </vw:Button.Template>
+        </vw:Key>
+        <vw:Key x:Name="btnstop" Content="STOP" HorizontalAlignment="left" VerticalAlignment="Top" Height="70" Width="80" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" Margin="125,85,0,0" AuthorizationRight="OperatingMode" KeyMode="KeyMode" >
+            <vw:Button.Template>
+                <ControlTemplate TargetType="{x:Type vw:Key}">
+                    <Grid>
+                        <Ellipse x:Name="BtnShadow3" Fill="Black"  Height="70" Width="80" Margin="0">
+                            <Ellipse.Effect>
+                                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        <Ellipse x:Name="elips" Stroke="Black" StrokeThickness="1" Fill="{DynamicResource FP_Red}"/>
+                        <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="elips"  Value="{DynamicResource FP_Gray}" />
+                            <Setter TargetName="BtnShadow3" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </vw:Button.Template>
+        </vw:Key>
+    </Grid>
+</UserControl>

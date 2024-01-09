@@ -1,0 +1,28 @@
+﻿<vw:View 
+        x:Class="HMI.Views.Parameter.Forplanet.P_F_Abluftvent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        Width="410" Height="335" >
+    <vw:GroupBox Width="390" Height="315" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource GroupBoxStyle}" LocalizableHeaderText="@Parameter.Text29">
+        <Grid>
+            <vw:Key   Width="160" Height="40"  Style="{DynamicResource FP_RedButton}" Margin="210,20,0,0" LocalizableText="@Tasten.Text7" HorizontalAlignment="Left" VerticalAlignment="Top" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.PC.Abluft.Aus" AuthorizationRight="Parameter" />
+            <vw:Key   Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  Style="{DynamicResource FP_GrayButton}" Margin="20,20,0,0" BlinkBrush="{DynamicResource FP_LightGreen}" IsBlinkEnabled="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Ventilator, Converter={StaticResource IntToBlinkConverter}}" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Ventilator, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource VentilatorStart}, StateMode=Value}" LocalizableText="@Tasten.Text6" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.PC.Abluft.Ein" KeyMode="KeyMode" AuthorizationRight="Parameter" />
+            <vw:Label Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,70,0,0" LocalizableText="@Parameter.Text3" FontSize="16" FontWeight="Bold"  />
+            <vw:Label Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,165,0,0" LocalizableText="@Parameter.Text4" FontSize="16"/>
+            <vw:Label Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,215,0,0" LocalizableText="@Parameter.Text5" FontSize="16"/>
+            <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,115,0,0" LocalizableUnitText="@Einheiten.sek" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Zeit bis Wiederanlauf.Second"/>
+            <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,115,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Zeit bis Wiederanlauf.Minute" LocalizableUnitText="@Einheiten.Min"/>
+            <Border Background="#FFFFFF00" Width="368" Height="90" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0" CornerRadius="4" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Spühlzeit aktiv, Converter={StaticResource BoolToVisConverter}}">
+                <Grid >
+                    <vw:Label Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" LocalizableText="@Parameter.Text6" FontSize="16" FontWeight="Bold"  />
+                    <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,45,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Spühlzeit.Minute" LocalizableUnitText="@Einheiten.Min"/>
+                    <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,45,0,0" LocalizableUnitText="@Einheiten.sek" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Spühlzeit.Second"/>
+                </Grid>
+            </Border>
+            <vw:Button x:Name="vds1" Style="{DynamicResource FP_GrayButton}" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,165,0,0" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Druckschalter 1, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Druckschalter}, StateMode=Value}" BlinkBrush="#FFFFFF00" IsBlinkEnabled="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Druckschalter 1, Converter={StaticResource BoolToBlinkConverterDS}}" />
+            <vw:Button x:Name="vds2" Style="{DynamicResource FP_GrayButton}" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,215,0,0" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Druckschalter 2, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Druckschalter}, StateMode=Value}" BlinkBrush="#FFFFFF00" IsBlinkEnabled="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Abluft.Druckschalter 2, Converter={StaticResource BoolToBlinkConverterDS}}" RenderTransformOrigin="0.488,0.225"/>
+        </Grid>
+    </vw:GroupBox>
+
+</vw:View>

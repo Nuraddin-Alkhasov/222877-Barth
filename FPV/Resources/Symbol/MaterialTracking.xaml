@@ -1,0 +1,372 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <DataTemplate x:Key="Tablet_1">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Tablet_1.png" Stretch="Fill" Width="155" Height="102" />
+    </DataTemplate>
+    <DataTemplate x:Key="Tablet_2">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Tablet_2.png" Stretch="Fill" Width="155" Height="102" />
+    </DataTemplate>
+    <DataTemplate x:Key="Tablet_3">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Tablet_3.png" Stretch="Fill" Width="155" Height="102" />
+    </DataTemplate>
+    <DataTemplate x:Key="Tablet_4">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Tablet_4.png" Stretch="Fill" Width="155" Height="102" />
+    </DataTemplate>
+    <DataTemplate x:Key="Tablet_5">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Tablet_5.png" Stretch="Fill" Width="155" Height="102" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="Basket_1">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Basket_1.png" Stretch="Fill" Width="138" Height="98" />
+    </DataTemplate>
+    <DataTemplate x:Key="Basket_2">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Basket_2.png" Stretch="Fill" Width="138" Height="98" />
+    </DataTemplate>
+    <DataTemplate x:Key="Basket_3">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Basket_3.png" Stretch="Fill" Width="138" Height="98" />
+    </DataTemplate>
+    <DataTemplate x:Key="Basket_4">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Basket_4.png" Stretch="Fill" Width="138" Height="98" />
+    </DataTemplate>
+    <DataTemplate x:Key="Basket_5">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Basket_5.png" Stretch="Fill" Width="138" Height="98" />
+    </DataTemplate>
+   
+    <DataTemplate x:Key="Belt_1">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Belt_1.png" Stretch="Fill" Width="168" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="Belt_2">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Belt_2.png" Stretch="Fill" Width="168" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="Belt_3">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Belt_3.png" Stretch="Fill" Width="168" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="Belt_4">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Belt_4.png" Stretch="Fill" Width="168" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="Belt_5">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Belt_5.png" Stretch="Fill" Width="168" Height="113" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="Box_1">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Box_1.png" Stretch="Fill" Width="86" Height="65" />
+    </DataTemplate>
+    <DataTemplate x:Key="Box_2">
+    <Image Source="/Images/MaterialTracking/CrossTransport/Box_2.png" Stretch="Fill" Width="86" Height="65" />
+    </DataTemplate>
+    <DataTemplate x:Key="Box_3">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Box_3.png" Stretch="Fill" Width="86" Height="65" />
+    </DataTemplate>
+    <DataTemplate x:Key="Box_4">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Box_4.png" Stretch="Fill" Width="86" Height="65" />
+    </DataTemplate>
+    <DataTemplate x:Key="Box_5">
+        <Image Source="/Images/MaterialTracking/CrossTransport/Box_5.png" Stretch="Fill" Width="86" Height="65" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="BS_1">
+        <Image Source="/Images/MaterialTracking/BS/BS_1.png" Stretch="Fill" Width="294" Height="91" />
+    </DataTemplate>
+    <DataTemplate x:Key="BS_2">
+        <Image Source="/Images/MaterialTracking/BS/BS_2.png" Stretch="Fill" Width="294" Height="91" />
+    </DataTemplate>
+    <DataTemplate x:Key="BS_3">
+        <Image Source="/Images/MaterialTracking/BS/BS_3.png" Stretch="Fill" Width="294" Height="91" />
+    </DataTemplate>
+    <DataTemplate x:Key="BS_4">
+        <Image Source="/Images/MaterialTracking/BS/BS_4.png" Stretch="Fill" Width="294" Height="91" />
+    </DataTemplate>
+    <DataTemplate x:Key="BS_5">
+        <Image Source="/Images/MaterialTracking/BS/BS_5.png" Stretch="Fill" Width="294" Height="91" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="Oven_1">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_1.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_2">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_2.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_3">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_3.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_4">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_4.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_5">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_5.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="OvenT1">
+        <Image Source="/Images/MaterialTracking/Oven/OvenT1.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenT2">
+        <Image Source="/Images/MaterialTracking/Oven/OvenT2.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenT3">
+        <Image Source="/Images/MaterialTracking/Oven/OvenT3.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenT4">
+        <Image Source="/Images/MaterialTracking/Oven/OvenT4.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenT5">
+        <Image Source="/Images/MaterialTracking/Oven/OvenT5.png" Stretch="Fill" Width="53" Height="77" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="OvenBand1">
+        <Image Source="/Images/MaterialTracking/Oven/OvenBand_1.png" Stretch="Fill" Width="200" Height="78" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenBand2">
+        <Image Source="/Images/MaterialTracking/Oven/OvenBand_2.png" Stretch="Fill" Width="200" Height="78" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenBand3">
+        <Image Source="/Images/MaterialTracking/Oven/OvenBand_3.png" Stretch="Fill" Width="200" Height="78" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenBand4">
+        <Image Source="/Images/MaterialTracking/Oven/OvenBand_4.png" Stretch="Fill" Width="200" Height="78" />
+    </DataTemplate>
+    <DataTemplate x:Key="OvenBand5">
+        <Image Source="/Images/MaterialTracking/Oven/OvenBand_5.png" Stretch="Fill" Width="200" Height="78" />
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="Oven_HVT1">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_HVT_1.png" Stretch="Fill" Width="40" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_HVT2">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_HVT_2.png" Stretch="Fill" Width="40" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_HVT3">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_HVT_3.png" Stretch="Fill" Width="40" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_HVT4">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_HVT_4.png" Stretch="Fill" Width="40" Height="77" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven_HVT5">
+        <Image Source="/Images/MaterialTracking/Oven/Oven_HVT_5.png" Stretch="Fill" Width="40" Height="77" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="HVTB1">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_B_1.png" Stretch="Fill" Width="193" Height="129" />
+    </DataTemplate>
+	 <DataTemplate x:Key="HVTB2">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_B_2.png" Stretch="Fill" Width="193" Height="129" />
+    </DataTemplate>
+	 <DataTemplate x:Key="HVTB3">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_B_3.png" Stretch="Fill" Width="193" Height="129" />
+    </DataTemplate>
+	 <DataTemplate x:Key="HVTB4">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_B_4.png" Stretch="Fill" Width="193" Height="129" />
+    </DataTemplate>
+	 <DataTemplate x:Key="HVTB5">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_B_5.png" Stretch="Fill" Width="193" Height="129" />
+    </DataTemplate>
+    
+
+    <DataTemplate x:Key="HVTBelt11">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt1_1.png" Stretch="Fill" Width="268" Height="205" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt12">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt1_2.png" Stretch="Fill" Width="268" Height="205" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt13">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt1_3.png" Stretch="Fill" Width="268" Height="205" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt14">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt1_4.png" Stretch="Fill" Width="268" Height="205" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt15">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt1_5.png" Stretch="Fill" Width="268" Height="205" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="HVTBelt21">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt2_1.png" Stretch="Fill" Width="230" Height="161" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt22">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt2_2.png" Stretch="Fill" Width="230" Height="161" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt23">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt2_3.png" Stretch="Fill" Width="230" Height="161" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt24">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt2_4.png" Stretch="Fill" Width="230" Height="161" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVTBelt25">
+        <Image Source="/Images/MaterialTracking/Feeding/BasketTilter/HVT_Belt2_5.png" Stretch="Fill" Width="230" Height="161" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ManiB1">
+        <Image Source="/Images/MaterialTracking/Feeding/Manipulator/Mani_B_1.png" Stretch="Fill" Width="162" Height="109" />
+    </DataTemplate>
+    <DataTemplate x:Key="ManiB2">
+        <Image Source="/Images/MaterialTracking/Feeding/Manipulator/Mani_B_2.png" Stretch="Fill" Width="162" Height="109" />
+    </DataTemplate>
+    <DataTemplate x:Key="ManiB3">
+        <Image Source="/Images/MaterialTracking/Feeding/Manipulator/Mani_B_3.png" Stretch="Fill" Width="162" Height="109" />
+    </DataTemplate>
+    <DataTemplate x:Key="ManiB4">
+        <Image Source="/Images/MaterialTracking/Feeding/Manipulator/Mani_B_4.png" Stretch="Fill" Width="162" Height="109" />
+    </DataTemplate>
+    <DataTemplate x:Key="ManiB5">
+        <Image Source="/Images/MaterialTracking/Feeding/Manipulator/Mani_B_5.png" Stretch="Fill" Width="162" Height="109" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="LTHB">
+        <Image Source="/Images/MaterialTracking/Feeding/LT_HB.png" Stretch="Fill" Width="202" Height="105" />
+    </DataTemplate>
+    <DataTemplate x:Key="LTDB">
+        <Image Source="/Images/MaterialTracking/Feeding/LT_DB.png" Stretch="Fill" Width="100" Height="60" />
+    </DataTemplate>
+    <DataTemplate x:Key="LTBox">
+        <Image Source="/Images/MaterialTracking/Feeding/LT_Box.png" Stretch="Fill" Width="88" Height="144" />
+    </DataTemplate>
+    <DataTemplate x:Key="LTBascket">
+        <Image Source="/Images/MaterialTracking/Feeding/LT_Basket.png" Stretch="Fill" Width="97" Height="66" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVFT1">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_FT_1.png" Stretch="Fill" Width="56" Height="33" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVFT2">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_FT_2.png" Stretch="Fill" Width="56" Height="33" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVFT3">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_FT_3.png" Stretch="Fill" Width="56" Height="33" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVFT4">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_FT_4.png" Stretch="Fill" Width="56" Height="33" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVFT5">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_FT_5.png" Stretch="Fill" Width="56" Height="33" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVTT11">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT1_1.png" Stretch="Fill" Width="56" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT12">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT1_2.png" Stretch="Fill" Width="56" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT13">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT1_3.png" Stretch="Fill" Width="56" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT14">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT1_4.png" Stretch="Fill" Width="56" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT15">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT1_5.png" Stretch="Fill" Width="56" Height="30" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVTT21">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT2_1.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT22">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT2_2.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT23">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT2_3.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT24">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT2_4.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT25">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT2_5.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVTT31">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT3_1.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT32">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT3_2.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT33">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT3_3.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT34">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT3_4.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT35">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT3_5.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVTT41">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT4_1.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT42">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT4_2.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT43">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT4_3.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT44">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT4_4.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTT45">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TT4_5.png" Stretch="Fill" Width="56" Height="32" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVB1">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_B_1.png" Stretch="Fill" Width="80" Height="51" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVB2">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_B_2.png" Stretch="Fill" Width="80" Height="51" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVB3">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_B_3.png" Stretch="Fill" Width="80" Height="51" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVB4">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_B_4.png" Stretch="Fill" Width="80" Height="51" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVB5">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_B_5.png" Stretch="Fill" Width="80" Height="51" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVBox1">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_Box_1.png" Stretch="Fill" Width="77" Height="74" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVBox2">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_Box_2.png" Stretch="Fill" Width="77" Height="74" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVBox3">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_Box_3.png" Stretch="Fill" Width="77" Height="74" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVBox4">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_Box_4.png" Stretch="Fill" Width="77" Height="74" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVBox5">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_Box_5.png" Stretch="Fill" Width="77" Height="74" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVTB1">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TB_1.png" Stretch="Fill" Width="50" Height="31" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTB2">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TB_2.png" Stretch="Fill" Width="50" Height="31" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTB3">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TB_3.png" Stretch="Fill" Width="50" Height="31" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTB4">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TB_4.png" Stretch="Fill" Width="50" Height="31" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVTB5">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_TB_5.png" Stretch="Fill" Width="50" Height="31" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOVOB1">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_OB_1.png" Stretch="Fill" Width="50" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVOB2">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_OB_2.png" Stretch="Fill" Width="50" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVOB3">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_OB_3.png" Stretch="Fill" Width="50" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVOB4">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_OB_4.png" Stretch="Fill" Width="50" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="MOVOB5">
+        <Image Source="/Images/MaterialTracking/MainView/MOV_OB_5.png" Stretch="Fill" Width="50" Height="30" />
+    </DataTemplate>
+
+</ResourceDictionary>

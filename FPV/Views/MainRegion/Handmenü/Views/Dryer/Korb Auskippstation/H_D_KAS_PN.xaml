@@ -1,0 +1,29 @@
+﻿<vw:View x:Class="HMI.Handmenu.Drayer.H_D_KAS_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}" IsVisibleChanged="View_IsVisibleChanged">
+
+    <Grid>
+        <vw:PanoramaNavigation Name="pn_H_D_KAS" Orientation="Horizontal" IsManipulationEnabled="False" >
+            <vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion StartView="H_D_KAS_AK_PN" AuthorizationRight="HandMenu"/>
+                <vw:PanoramaRegion StartView="H_D_KAS_DA_PN" AuthorizationRight="HandMenu"/>
+                <vw:PanoramaRegion StartView="H_D_KAS_OB1_PN" AuthorizationRight="HandMenu"/>
+                <vw:PanoramaRegion StartView="H_D_KAS_OB2_PN" AuthorizationRight="HandMenu"/>
+            </vw:PanoramaNavigation.PanoramaRegions>
+        </vw:PanoramaNavigation>
+        <vw:ListBox ItemContainerStyle="{DynamicResource PanoramaNavigationListBoxItemStyle}" 
+                 ItemsPanel="{DynamicResource PanoramaNavigationItemTemplate}"  
+                 x:Name="ListBox" 
+                 HorizontalAlignment="Center" 
+                 SelectedIndex="{Binding SelectedPanoramaRegionIndex, ElementName=pn_H_D_KAS, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Background="{DynamicResource MainViewBackgroundBrush}"
+                 BorderThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,15" Opacity="0.5" AuthorizationMode="Visibility" AuthorizationRight="HandMenu">
+            <vw:ListBoxItem />
+            <vw:ListBoxItem />
+            <vw:ListBoxItem />
+            <vw:ListBoxItem />
+        </vw:ListBox>
+    </Grid>
+</vw:View>

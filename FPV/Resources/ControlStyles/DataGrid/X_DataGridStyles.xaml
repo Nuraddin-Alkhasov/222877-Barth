@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:vw="http://inosoft.com/visiwin7">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/DataGrid/DatagridRowProtocolStyle.xaml" />        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/DataGrid/DatagridRowStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

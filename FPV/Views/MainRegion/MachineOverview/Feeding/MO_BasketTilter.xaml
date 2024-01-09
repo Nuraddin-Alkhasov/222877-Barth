@@ -1,0 +1,27 @@
+﻿<vw:View
+	x:Class="HMI.Views.MainRegion.MachineOverview.MO_BasketTilter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="800">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:PictureBox HorizontalAlignment="Center" VerticalAlignment="Center" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.00 Allgemein.DB Korb Auskippen PD.Status.Korb 1 links.Belegt, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource BasketTilterList}, StateMode=Value}" />
+        <vw:PictureBox Margin="690,110,0,0" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.00 Allgemein.DB Korb Auskippen PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource HVT_Basket}, StateMode=Value}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Height="129" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.00 Allgemein.DB Korb Auskippen PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}" />
+        <vw:Button Margin="690,110,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Height="129" Background="Transparent" BorderThickness="0"  Tag="Basket*1*9*0" Click="Button_Click"/>
+
+        <vw:PictureBox Margin="878,47,0,0" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 PD.Status.Charge.Aktueller Durchlauf, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource HVT_Band1}, StateMode=Value}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Height="207" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"/>
+        <vw:Button Margin="878,47,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Height="207" Background="Transparent" BorderThickness="0"  Tag="Belt*1*10*0" Click="Button_Click"/>
+
+        <vw:PictureBox Margin="1053,31,0,0" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource HVT_Band2}, StateMode=Value}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="161" Visibility="{vw:VariableBinding Converter={StaticResource BoolToVisConverter}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 PD.Status.Charge.Material vorhanden}" />
+        <vw:Button Margin="1053,31,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="161" Background="Transparent" BorderThickness="0"  Tag="Belt*3*3*0" Click="Button_Click"/>
+        <vw:TextBlock Text="Aktuell Abdunstzeit" VerticalAlignment="Center" FontSize="20" Margin="18,574,1422,199" FontWeight="Bold"/>
+        <vw:NumericVarOut Height="40" Width="80" LocalizableUnitText="@Einheiten.Min" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="58,625,0,135" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Actual value.Abdunstzeit.Minute"/>
+        <vw:NumericVarOut Height="40" Width="80" LocalizableUnitText="@Einheiten.sek" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,625,1482,135" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Actual value.Abdunstzeit.Sekunde"/>
+        <vw:NumericVarIn Height="40" Width="80" LocalizableUnitText="@Einheiten.Min" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="58,741,0,19" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.PC.Gerneral.Abdunstzeit.Minute" AuthorizationRight="Status"/>
+        <vw:NumericVarIn Height="40" Width="80" LocalizableUnitText="@Einheiten.sek" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,741,1482,19" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.PC.Gerneral.Abdunstzeit.Sekunde" AuthorizationRight="Status"/>
+        <vw:TextBlock Text="Soll Abdunstzeit" VerticalAlignment="Center" FontSize="20" Margin="18,690,1422,83" FontWeight="Bold"/>
+
+    </Grid>
+
+</vw:View>

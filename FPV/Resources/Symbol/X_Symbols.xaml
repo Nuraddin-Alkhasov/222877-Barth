@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:vw="http://inosoft.com/visiwin7">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/Symbol/MaterialTracking.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/Symbol/SymbolLists.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/Symbol/SymbolResources.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/Symbol/MachineOverView.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

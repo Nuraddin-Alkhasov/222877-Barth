@@ -1,0 +1,43 @@
+﻿<vw:View x:Class="HMI.LoggingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+	Width="1840" Height="1000" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <vw:View.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <vw:AlarmTimeToTextConverter x:Key="AlarmTimeToTextConverter" />
+    </vw:View.Resources>
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="LoggingAdapter"/>
+    </vw:View.DataContext>
+
+    <Grid x:Name="LayoutRoot">
+        <ListView Margin="10,10,10,50" ItemsSource="{Binding LoggingEntries}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+            <ListView.Resources>
+                <DataTemplate x:Key="xTimeStamp">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding TimeStamp, Converter={StaticResource AlarmTimeToTextConverter}}"/>
+                </DataTemplate>
+                <DataTemplate x:Key="xLocalizedEventName">
+                    <TextBlock VerticalAlignment="Center" Text="{Binding LocalizedEventName}"/>
+                </DataTemplate>
+                <DataTemplate x:Key="xLocalizedText">
+                    <TextBlock VerticalAlignment="Center" Text="{Binding LocalizedText}"/>
+                </DataTemplate>
+                <DataTemplate x:Key="xUser">
+                    <TextBlock VerticalAlignment="Center" Text="{Binding User}"/>
+                </DataTemplate>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="{vw:LocalizedText Text=@Logging.LoggingView.ListView.Time}"  CellTemplate="{StaticResource xTimeStamp}" Width="250" />
+                    <GridViewColumn Header="{vw:LocalizedText Text=@Logging.LoggingView.ListView.Event}"  CellTemplate="{StaticResource xLocalizedEventName}" Width="250" />
+                    <GridViewColumn Header="{vw:LocalizedText Text=@Logging.LoggingView.ListView.Text}"  CellTemplate="{StaticResource xLocalizedText}" Width="1050" />
+                    <GridViewColumn Header="{vw:LocalizedText Text=@Logging.LoggingView.ListView.User}"  CellTemplate="{StaticResource xUser}" Width="250" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ProgressBar Margin="10,0,10,12" VerticalAlignment="Bottom" Height="25" IsIndeterminate="{Binding IsRequestingLoggingEntries}"/>
+        <vw:NavigationButton x:Name="ButtonOpenMenu" Style="{DynamicResource FP_FilterButton}" Height="72" Width="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1750,0,0,50" Command="{Binding ShowRequestLoggingDialogCommand}" AuthorizationRight="Logging" AuthorizationMode="Visibility" />
+    </Grid>
+</vw:View>

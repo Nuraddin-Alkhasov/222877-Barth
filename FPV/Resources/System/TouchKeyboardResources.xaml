@@ -1,0 +1,259 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="http://inosoft.com/visiwin7" 
+    xmlns:system="clr-namespace:System;assembly=mscorlib" 
+    xmlns:Custom="http://schemas.microsoft.com/surface/2008" 
+    xmlns:HMI="clr-namespace:HMI" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions">
+
+    <local:TouchKeyboardLayout x:Key="TouchKeyboardLayout">
+
+        <local:TouchKeyboardLayout.DeadKeys>
+            <system:String>´</system:String>
+            <system:String>`</system:String>
+            <system:String>^</system:String>
+        </local:TouchKeyboardLayout.DeadKeys>
+
+        <local:TouchKeyboardLayout.TouchKeys>
+            <!--Zahlenreihe -->
+            <local:TouchKey	Name="TKM_Button01" Regular="^" Shift="°" TextBottomLeft="^" TextTopLeft="°"/>
+            <local:TouchKey	Name="TKM_Key02" Regular="1" Shift="!" TextBottomLeft="1" TextTopLeft="!"/>
+            <local:TouchKey	Name="TKM_Key03" Regular="2" Shift="&quot;" AltGr="²" TextBottomLeft="2" TextTopLeft="&quot;" TextBottomRight="²"/>
+            <local:TouchKey	Name="TKM_Key04" Regular="3" Shift="§" AltGr="³" TextBottomLeft="3" TextTopLeft="§" TextBottomRight="³"/>
+            <local:TouchKey	Name="TKM_Key05" Regular="4" Shift="$" TextBottomLeft="4" TextTopLeft="$"/>
+            <local:TouchKey	Name="TKM_Key06" Regular="5" Shift="%" TextBottomLeft="5" TextTopLeft="%"/>
+            <local:TouchKey	Name="TKM_Key07" Regular="6" Shift="&amp;" TextBottomLeft="6" TextTopLeft="&amp;"/>
+            <local:TouchKey	Name="TKM_Key08" Regular="7" Shift="/" AltGr="{}{" TextBottomLeft="7" TextTopLeft="/" TextBottomRight="{}{" />
+            <local:TouchKey	Name="TKM_Key09" Regular="8" Shift="(" AltGr="[" TextBottomLeft="8" TextTopLeft="(" TextBottomRight="["/>
+            <local:TouchKey	Name="TKM_Key10" Regular="9" Shift=")" AltGr="]" TextBottomLeft="9" TextTopLeft=")" TextBottomRight="]"/>
+            <local:TouchKey	Name="TKM_Key11" Regular="0" Shift="=" AltGr="}" TextBottomLeft="0" TextTopLeft="=" TextBottomRight="}"/>
+            <local:TouchKey	Name="TKM_Key12" Regular="ß" Shift="?" AltGr="\" TextTopLeft="?" TextBottomLeft="ß" TextBottomRight="\" />
+            <local:TouchKey	Name="TKM_Key13" Regular="'" Shift="'" TextBottomLeft="'" TextTopLeft="'"/>
+            <local:TouchKey	Name="TKM_Back" TextCenter="←"/>
+
+            <!-- Q bis + -->
+            <local:TouchKey	Name="TKM_Tab" TextTopLeft="←" TextBottomLeft="→"/>
+            <local:TouchKey	Name="TKM_Key14" Regular="q" Shift="Q" TextCenter="Q"/>
+            <local:TouchKey	Name="TKM_Key15" Regular="w" Shift="W" TextCenter="W"/>
+            <local:TouchKey	Name="TKM_Key16" Regular="e" Shift="E" TextCenter="E"/>
+            <local:TouchKey	Name="TKM_Key17" Regular="r" Shift="R" TextCenter="R"/>
+            <local:TouchKey	Name="TKM_Key18" Regular="t" Shift="T" TextCenter="T"/>
+            <local:TouchKey	Name="TKM_Key19" Regular="z" Shift="Z" TextCenter="Z"/>
+            <local:TouchKey	Name="TKM_Key20" Regular="u" Shift="U" TextCenter="U"/>
+            <local:TouchKey	Name="TKM_Key21" Regular="i" Shift="I" TextCenter="I"/>
+            <local:TouchKey	Name="TKM_Key22" Regular="o" Shift="O" TextCenter="O"/>
+            <local:TouchKey	Name="TKM_Key23" Regular="p" Shift="P" TextCenter="P"/>
+            <local:TouchKey	Name="TKM_Key24" Regular="ü" Shift="Ü" TextCenter="Ü"/>
+            <local:TouchKey	Name="TKM_Key25" Regular="+" Shift="*" AltGr="~" TextTopLeft="*" TextBottomLeft="+" TextBottomRight="~" />
+            <local:TouchKey	Name="TKM_Return" TextCenter="Enter"/>
+
+            <!-- A bis # -->
+            <local:TouchKey	Name="TKM_Capital" TextCenter="↓" Regular="↓" Shift="↑" />
+            <local:TouchKey	Name="TKM_Key26" Regular="a" Shift="A" TextCenter="A"/>
+            <local:TouchKey	Name="TKM_Key27" Regular="s" Shift="S" TextCenter="S"/>
+            <local:TouchKey	Name="TKM_Key28" Regular="d" Shift="D" TextCenter="D"/>
+            <local:TouchKey	Name="TKM_Key29" Regular="f" Shift="F" TextCenter="F"/>
+            <local:TouchKey	Name="TKM_Key30" Regular="g" Shift="G" TextCenter="G"/>
+            <local:TouchKey	Name="TKM_Key31" Regular="h" Shift="H" TextCenter="H"/>
+            <local:TouchKey	Name="TKM_Key32" Regular="j" Shift="J" TextCenter="J"/>
+            <local:TouchKey	Name="TKM_Key33" Regular="k" Shift="K" TextCenter="K"/>
+            <local:TouchKey	Name="TKM_Key34" Regular="l" Shift="L" TextCenter="L"/>
+            <local:TouchKey	Name="TKM_Key35" Regular="ö" Shift="Ö" TextCenter="Ö"/>
+            <local:TouchKey	Name="TKM_Key36" Regular="ä" Shift="Ä" TextCenter="Ä"/>
+            <local:TouchKey	Name="TKM_Key37" Regular="#" Shift="'" TextBottomLeft="#" TextTopLeft="'"/>
+
+            <!-- < bis _ -->
+            <local:TouchKey	Name="TKM_LeftShift" Regular="↑" TextCenter="↑"/>
+            <local:TouchKey	Name="TKM_Key38" Regular="&lt;" Shift="&gt;" AltGr="|" TextTopLeft="&gt;" TextBottomLeft="&lt;" TextBottomRight="|"/>
+            <local:TouchKey	Name="TKM_Key39" Regular="y" Shift="Y" TextCenter="Y"/>
+            <local:TouchKey	Name="TKM_Key40" Regular="x" Shift="X" TextCenter="X"/>
+            <local:TouchKey	Name="TKM_Key41" Regular="c" Shift="C" TextCenter="C"/>
+            <local:TouchKey	Name="TKM_Key42" Regular="v" Shift="V" TextCenter="V"/>
+            <local:TouchKey	Name="TKM_Key43" Regular="b" Shift="B" TextCenter="B"/>
+            <local:TouchKey	Name="TKM_Key44" Regular="m" Shift="M" AltGr="µ" TextCenter="M" TextBottomRight="µ"/>
+            <local:TouchKey	Name="TKM_Key45" Regular="n" Shift="N" TextCenter="N"/>
+            <local:TouchKey	Name="TKM_Key46" Regular="," Shift=";" TextBottomLeft="," TextTopLeft=";"/>
+            <local:TouchKey	Name="TKM_Key47" Regular="." Shift=":" TextBottomLeft="." TextTopLeft=":"/>
+            <local:TouchKey	Name="TKM_Key48" Regular="-" Shift="_" TextBottomLeft="-" TextTopLeft="_"/>
+            <local:TouchKey	Name="TKM_RightShift" Regular="↑" TextCenter="↑"/>
+
+            <!-- SpaceReihe -->
+            <local:TouchKey	Name="TKM_LeftCtrl" Regular="Strg" Shift="Strg" TextCenter="Strg"/>
+            <local:TouchKey	Name="TKM_LeftAlt" Regular="Alt" Shift="Alt" TextCenter="Alt"/>
+            <local:TouchKey	Name="TKM_Space"/>
+            <local:TouchKey	Name="TKM_RightAlt" Regular="AltGr" Shift="AltGr" TextCenter="AltGr"/>
+            <local:TouchKey	Name="TKM_RightCtrl" Regular="Strg" Shift="Strg" TextCenter="Strg"/>
+
+            <local:TouchKey	Name="TKM_Oem3" Regular="'" Shift="~" TextBottomLeft="'" TextTopLeft="'"/>
+            <local:TouchKey	Name="TKM_OemQuotes" Regular="," Shift="&quot;" TextBottomLeft="," TextTopLeft="&quot;"/>
+
+            <local:TouchKey	Name="TKM_Clear"/>
+            <local:TouchKey	Name="TKM_Delete" TextCenter="Del"/>
+
+            <local:TouchKey	Name="TKM_NumPad0" Regular="0"/>
+            <local:TouchKey	Name="TKM_NumPad1" Regular="1"/>
+            <local:TouchKey	Name="TKM_NumPad2" Regular="2"/>
+            <local:TouchKey	Name="TKM_NumPad3" Regular="3"/>
+            <local:TouchKey	Name="TKM_NumPad4" Regular="4"/>
+            <local:TouchKey	Name="TKM_NumPad5" Regular="5"/>
+            <local:TouchKey	Name="TKM_NumPad6" Regular="6"/>
+            <local:TouchKey	Name="TKM_NumPad7" Regular="7"/>
+            <local:TouchKey	Name="TKM_NumPad8" Regular="8"/>
+            <local:TouchKey	Name="TKM_NumPad9" Regular="9"/>
+
+            <local:TouchKey	Name="TKM_Cancel"/>
+            <local:TouchKey	Name="TKM_Enter"/>
+            <local:TouchKey	Name="TKM_Escape"/>
+            <local:TouchKey	Name="TKM_CapsLock" TextCenter="↑"/>
+
+            <local:TouchKey	Name="TKM_Nums" TextCenter="123"/>
+            <local:TouchKey	Name="TKM_Marks" TextCenter="#+="/>
+
+            <local:TouchKey	Name="TKM_Up" TextCenter="↑"/>
+            <local:TouchKey	Name="TKM_Right" TextCenter="→"/>
+            <local:TouchKey	Name="TKM_Down" TextCenter="↓"/>
+            <local:TouchKey	Name="TKM_Left" TextCenter="←"/>
+
+            <local:TouchKey	Name="TKM_F1"/>
+            <local:TouchKey	Name="TKM_F2"/>
+            <local:TouchKey	Name="TKM_F3"/>
+            <local:TouchKey	Name="TKM_F4"/>
+            <local:TouchKey	Name="TKM_F5"/>
+            <local:TouchKey	Name="TKM_F6"/>
+            <local:TouchKey	Name="TKM_F7"/>
+            <local:TouchKey	Name="TKM_F8"/>
+            <local:TouchKey	Name="TKM_F9"/>
+            <local:TouchKey	Name="TKM_F10"/>
+            <local:TouchKey	Name="TKM_F11"/>
+            <local:TouchKey	Name="TKM_F12"/>
+            <local:TouchKey	Name="TKM_F13"/>
+            <local:TouchKey	Name="TKM_F14"/>
+            <local:TouchKey	Name="TKM_F15"/>
+            <local:TouchKey	Name="TKM_F16"/>
+            <local:TouchKey	Name="TKM_F17"/>
+            <local:TouchKey	Name="TKM_F18"/>
+            <local:TouchKey	Name="TKM_F19"/>
+            <local:TouchKey	Name="TKM_F20"/>
+            <local:TouchKey	Name="TKM_F21"/>
+            <local:TouchKey	Name="TKM_F22"/>
+            <local:TouchKey	Name="TKM_F23"/>
+            <local:TouchKey	Name="TKM_F24"/>
+
+        </local:TouchKeyboardLayout.TouchKeys>
+    </local:TouchKeyboardLayout>
+
+    <Style x:Key="AlphaTouchKeyboardStyle" TargetType="{x:Type local:TouchKeyboard}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:TouchKeyboard}">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <local:TouchKeyboardButton x:Name="TKey_Button14" TouchKeyMapping="{DynamicResource TKM_Key14}" TouchKeyName="TKey_Button14" TextMode="SingleCenterText" Grid.Column="0" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button15" TouchKeyMapping="{DynamicResource TKM_Key15}" TouchKeyName="TKey_Button15" TextMode="SingleCenterText" Grid.Column="1" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button16" TouchKeyMapping="{DynamicResource TKM_Key16}" TouchKeyName="TKey_Button16" TextMode="SingleCenterText" Grid.Column="2" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button17" TouchKeyMapping="{DynamicResource TKM_Key17}" TouchKeyName="TKey_Button17" TextMode="SingleCenterText" Grid.Column="3" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button18" TouchKeyMapping="{DynamicResource TKM_Key18}" TouchKeyName="TKey_Button18" TextMode="SingleCenterText" Grid.Column="4" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button19" TouchKeyMapping="{DynamicResource TKM_Key19}" TouchKeyName="TKey_Button19" TextMode="SingleCenterText" Grid.Column="5" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button20" TouchKeyMapping="{DynamicResource TKM_Key20}" TouchKeyName="TKey_Button20" TextMode="SingleCenterText" Grid.Column="6" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button21" TouchKeyMapping="{DynamicResource TKM_Key21}" TouchKeyName="TKey_Button21" TextMode="SingleCenterText" Grid.Column="7" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button22" TouchKeyMapping="{DynamicResource TKM_Key22}" TouchKeyName="TKey_Button22" TextMode="SingleCenterText" Grid.Column="8" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button23" TouchKeyMapping="{DynamicResource TKM_Key23}" TouchKeyName="TKey_Button23" TextMode="SingleCenterText" Grid.Column="9" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button24" TouchKeyMapping="{DynamicResource TKM_Key24}" TouchKeyName="TKey_Button24" TextMode="SingleCenterText" Grid.Column="10" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Back" TouchKeyMapping="{DynamicResource TKM_Back}" TouchKeyName="TKey_Back" TextCenter="?" TextMode="SingleCenterText" Grid.Column="11" Grid.Row="0" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+
+                        <local:TouchKeyboardButton x:Name="TKey_Button26" TouchKeyMapping="{DynamicResource TKM_Key26}" TouchKeyName="TKey_Button26" TextMode="SingleCenterText" Grid.Column="0" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button27" TouchKeyMapping="{DynamicResource TKM_Key27}" TouchKeyName="TKey_Button27" TextMode="SingleCenterText" Grid.Column="1" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button28" TouchKeyMapping="{DynamicResource TKM_Key28}" TouchKeyName="TKey_Button28" TextMode="SingleCenterText" Grid.Column="2" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button29" TouchKeyMapping="{DynamicResource TKM_Key29}" TouchKeyName="TKey_Button29" TextMode="SingleCenterText" Grid.Column="3" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}" />
+                        <local:TouchKeyboardButton x:Name="TKey_Button30" TouchKeyMapping="{DynamicResource TKM_Key30}" TouchKeyName="TKey_Button30" TextMode="SingleCenterText" Grid.Column="4" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button31" TouchKeyMapping="{DynamicResource TKM_Key31}" TouchKeyName="TKey_Button31" TextMode="SingleCenterText" Grid.Column="5" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button32" TouchKeyMapping="{DynamicResource TKM_Key32}" TouchKeyName="TKey_Button32" TextMode="SingleCenterText" Grid.Column="6" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button33" TouchKeyMapping="{DynamicResource TKM_Key33}" TouchKeyName="TKey_Button33" TextMode="SingleCenterText" Grid.Column="7" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button34" TouchKeyMapping="{DynamicResource TKM_Key34}" TouchKeyName="TKey_Button34" TextMode="SingleCenterText" Grid.Column="8" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button35" TouchKeyMapping="{DynamicResource TKM_Key35}" TouchKeyName="TKey_Button35" TextMode="SingleCenterText" Grid.Column="9" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button36" TouchKeyMapping="{DynamicResource TKM_Key36}" TouchKeyName="TKey_Button36" TextMode="SingleCenterText" Grid.Column="10" Grid.Row="1" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Return" TouchKeyMapping="{DynamicResource TKM_Return}" Style="{DynamicResource FP_TKButton}" TouchKeyName="TKey_Return" Grid.Column="11" Grid.Row="1" Margin="5" Grid.ColumnSpan="2" Grid.RowSpan="2"  IsDefault="True"/>
+
+                        <local:TouchKeyboardButton x:Name="TKey_LeftShift" TouchKeyMapping="{DynamicResource TKM_LeftShift}" TouchKeyName="TKey_LeftShift" TextMode="SingleCenterText" Grid.Column="0" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button39" TouchKeyMapping="{DynamicResource TKM_Key39}" TouchKeyName="TKey_Button39" TextMode="SingleCenterText" Grid.Column="1" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button40" TouchKeyMapping="{DynamicResource TKM_Key40}" TouchKeyName="TKey_Button40" TextMode="SingleCenterText" Grid.Column="2" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button41" TouchKeyMapping="{DynamicResource TKM_Key41}" TouchKeyName="TKey_Button41" TextMode="SingleCenterText" Grid.Column="3" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button42" TouchKeyMapping="{DynamicResource TKM_Key42}" TouchKeyName="TKey_Button42" TextMode="SingleCenterText" Grid.Column="4" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button43" TouchKeyMapping="{DynamicResource TKM_Key43}" TouchKeyName="TKey_Button43" TextMode="SingleCenterText" Grid.Column="5" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button44" TouchKeyMapping="{DynamicResource TKM_Key44}" TouchKeyName="TKey_Button44" TextMode="SingleCenterText" Grid.Column="6" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button45" TouchKeyMapping="{DynamicResource TKM_Key45}" TouchKeyName="TKey_Button45" TextMode="SingleCenterText" Grid.Column="7" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button12" TouchKeyMapping="{DynamicResource TKM_Key12}" TouchKeyName="TKey_Button45" TextMode="SingleCenterText" Grid.Column="8" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button46" TouchKeyMapping="{DynamicResource TKM_Key46}" TouchKeyName="TKey_Button46" TextMode="SingleCenterText" Grid.Column="9" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Button47" TouchKeyMapping="{DynamicResource TKM_Key47}" TouchKeyName="TKey_Button47" TextMode="SingleCenterText" Grid.Column="10" Grid.Row="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+
+                        <local:TouchKeyboardButton x:Name="TKey_Nums" TouchKeyMapping="{DynamicResource TKM_Nums}" TouchKeyName="TKey_Nums" TextCenter="123" TextMode="SingleCenterText" Grid.Row="3" CommandParameter="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Space" TouchKeyMapping="{DynamicResource TKM_Space}" TouchKeyName="TKey_Space" TextMode="SingleCenterText" Grid.Column="2" Grid.Row="3" Margin="5" Grid.ColumnSpan="8"  Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Marks" TouchKeyMapping="{DynamicResource TKM_Marks}" TouchKeyName="TKey_Marks" TextCenter="#+=" TextMode="SingleCenterText" Grid.Column="10" Grid.Row="3" Margin="5" Grid.ColumnSpan="2"  Style="{DynamicResource FP_TKButton}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Width" Value="750"/>
+        <Setter Property="Height" Value="250"/>
+    </Style>
+
+    <Style x:Key="NumericTouchKeyboardStyle" TargetType="{x:Type local:TouchKeyboard}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:TouchKeyboard}">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad9" TouchKeyMapping="{DynamicResource TKM_NumPad9}"  TouchKeyName="TKM_NumPad9" TextMode="SingleCenterText" Grid.Row="0" Grid.Column="2" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad8" TouchKeyMapping="{DynamicResource TKM_NumPad8}"  TouchKeyName="TKM_NumPad8" TextMode="SingleCenterText" Grid.Row="0" Grid.Column="1" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad7" TouchKeyMapping="{DynamicResource TKM_NumPad7}"  TouchKeyName="TKM_NumPad7" TextMode="SingleCenterText" Grid.Row="0" Grid.Column="0" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad6" TouchKeyMapping="{DynamicResource TKM_NumPad6}"  TouchKeyName="TKM_NumPad6" TextMode="SingleCenterText" Grid.Row="1" Grid.Column="2" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad5" TouchKeyMapping="{DynamicResource TKM_NumPad5}"  TouchKeyName="TKM_NumPad5" TextMode="SingleCenterText" Grid.Row="1" Grid.Column="1" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad4" TouchKeyMapping="{DynamicResource TKM_NumPad4}"  TouchKeyName="TKM_NumPad4" TextMode="SingleCenterText" Grid.Row="1" Grid.Column="0" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad3" TouchKeyMapping="{DynamicResource TKM_NumPad3}"  TouchKeyName="TKM_NumPad3" TextMode="SingleCenterText" Grid.Row="2" Grid.Column="2" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad2" TouchKeyMapping="{DynamicResource TKM_NumPad2}"  TouchKeyName="TKM_NumPad2" TextMode="SingleCenterText" Grid.Row="2" Grid.Column="1" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad1" TouchKeyMapping="{DynamicResource TKM_NumPad1}"  TouchKeyName="TKM_NumPad1" TextMode="SingleCenterText" Grid.Row="2" Grid.Column="0" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPad0" TouchKeyMapping="{DynamicResource TKM_NumPad0}"  TouchKeyName="TKM_NumPad0" TextMode="SingleCenterText" Grid.Row="3" Grid.Column="0" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_OemMinus" TouchKeyMapping="{DynamicResource TKM_OemMinus}"  TouchKeyName="TKM_OemMinus" TextMode="SingleCenterText" Grid.Row="3" Grid.Column="1" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKM_OemCommaNum" TouchKeyMapping="{DynamicResource TKM_OemCommaNum}" TouchKeyName="TKM_OemCommaNum" TextMode="SingleCenterText" Grid.Row="3" Grid.Column="2" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Back" TouchKeyMapping="{DynamicResource TKM_Back}"  TextCenter="←" TextMode="SingleCenterText"  TouchKeyName="TKey_Back" Grid.Row="0" Grid.Column="3" Margin="5" Style="{DynamicResource FP_TKButton}"/>
+                        <local:TouchKeyboardButton x:Name="TKey_Return" TouchKeyMapping="{DynamicResource TKM_Return}" TouchKeyName="TKey_Return" Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Margin="5" Style="{DynamicResource FP_TKButton}" IsDefault="True"/>
+                        <local:TouchKeyboardButton x:Name="TKM_NumPadE" Visibility="Hidden" TouchKeyMapping="{DynamicResource TKM_NumPad0}"  Grid.Column="7" Height="Auto" TouchKeyName="TKM_NumPad0" TextMode="SingleCenterText" Width="Auto" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Width" Value="750"/>
+        <Setter Property="Height" Value="250"/>
+    </Style>
+</ResourceDictionary>

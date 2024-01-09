@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:vw="http://inosoft.com/visiwin7">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/RadioButton/GBRadioButtonStyle.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/RadioButton/RadioButtonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

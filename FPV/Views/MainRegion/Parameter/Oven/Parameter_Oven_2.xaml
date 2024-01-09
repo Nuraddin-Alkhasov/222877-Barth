@@ -1,0 +1,58 @@
+﻿<vw:View x:Class="HMI.Parameter.Parameter_Oven_2"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:vw="http://inosoft.com/visiwin7"
+            Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="3">
+            <vw:Border Background="{DynamicResource FP_Blue}" >
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+            </vw:Border>
+            <vw:Label LocalizableText="@Parameter.Text76" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" Text="" />
+        </Grid>
+
+        <vw:GroupBox Grid.Row="1" Grid.Column="0"  Style="{DynamicResource GroupBoxStyle}" Width="550" Height="265" Margin="32,200,31,0" HorizontalAlignment="Center" VerticalAlignment="Top" HeaderText="">
+            <Grid>
+                <Border Background="{DynamicResource FP_Blue}" Height="40" VerticalAlignment="Top" />
+                <vw:TextBlock LocalizableText="@Parameter.Text7" Margin="21,-13,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,60,0" FontSize="14" LocalizableLabelText="@Parameter.Text72" LocalizableUnitText="@Einheiten.U_min" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" LabelText="" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.01 Vorzone.DB Vorzone HMI.Istwerte.Drehzahl"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text36" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.01 Vorzone.DB Vorzone HMI.Sollwerte.Temperatur"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,110,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text74" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.01 Vorzone.DB Vorzone HMI.Sollwerte.Temperatur Differenz OG"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,160,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text75" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.01 Vorzone.DB Vorzone HMI.Sollwerte.Temperatur Differenz UG"/>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-35,60,0" FontSize="14" LocalizableLabelText="@Parameter.Text73" LocalizableUnitText="@Einheiten.grad_C" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.01 Vorzone.DB Vorzone HMI.Istwerte.Temperatur"/>
+            </Grid>
+
+        </vw:GroupBox>
+        <vw:GroupBox Grid.Row="1" Grid.Column="2"  Style="{DynamicResource GroupBoxStyle}" Width="550" Height="400" Margin="31,200,32,0" HorizontalAlignment="Center" VerticalAlignment="Top" HeaderText="">
+            <Grid>
+                <Border Background="{DynamicResource FP_Blue}" Height="40" VerticalAlignment="Top" />
+                <vw:TextBlock LocalizableText="@Parameter.Text1" Margin="21,-13,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,60,0" FontSize="14" LocalizableLabelText="@Parameter.Text72" LocalizableUnitText="@Einheiten.U_min" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" LabelText="" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Istwerte.Drehzahl"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text36" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Sollwerte.Temperatur"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,110,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text74" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Sollwerte.Temperatur Differenz OG"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,160,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text75" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Sollwerte.Temperatur Differenz UG"/>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-35,60,0" FontSize="14" LocalizableLabelText="@Parameter.Text73" LocalizableUnitText="@Einheiten.grad_C" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Istwerte.Temperatur"/>
+                <vw:GroupBox Style="{DynamicResource GroupBoxStyle}" Width="319" Height="130" Margin="180,210,40,0" HorizontalAlignment="Center" VerticalAlignment="Top" HeaderText="" LocalizableHeaderText="@Parameter.Text87">
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="38" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Sollwerte.Mindest Taktzeit.Minuten" Margin="40,0,0,0"/>
+                        <vw:NumericVarIn Width="80" Height="38" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.03 Trockner.DB Trockner HMI.Sollwerte.Mindest Taktzeit.Sekunden" Margin="0,0,40,0"/>
+
+                    </Grid>
+                </vw:GroupBox>
+            </Grid>
+
+        </vw:GroupBox>
+
+    </Grid>
+</vw:View>

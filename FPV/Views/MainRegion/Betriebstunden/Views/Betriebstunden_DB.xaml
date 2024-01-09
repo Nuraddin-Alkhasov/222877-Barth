@@ -1,0 +1,38 @@
+﻿<vw:View x:Class="HMI.Views.MainRegion.Betriebstunden.Betriebstunden_DB"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource MainViewBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <vw:Button  Grid.Row="0" Grid.Column="0" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMLiftandTilter}" SymbolVerticalAlignment="Bottom" SymbolHorizontalAlignment="Center" SymbolMargin="0,0,0,10" SymbolResourceKey="" Click="NavigationButton_Click"/>
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Feeding.Text1" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" HorizontalAlignment="Left" Margin="70,95,0,0"/>
+
+        <vw:Button Grid.Row="0" Grid.Column="1" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMManipulator}" SymbolHorizontalAlignment="Center" SymbolVerticalAlignment="Bottom" SymbolMargin="0,0,0,10" SymbolResourceKey="" Click="Button_Click" />
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Manipulator.Text6" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" Grid.Column="1" Margin="70,95,85,0"/>
+        <vw:Button Grid.Row="1" Grid.Column="0" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMKorbAuskippen}" SymbolHorizontalAlignment="Center" SymbolVerticalAlignment="Bottom" SymbolResourceKey="" SymbolMargin="0,0,0,30" Margin="70,90" Click="Button_Click_1" />
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Dryer.Text2" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" Margin="70,95,85,0" Grid.Row="1"/>
+        <vw:Button Grid.Row="0" Grid.Column="2" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMForplanet}" SymbolHorizontalAlignment="Center" SymbolVerticalAlignment="Bottom" SymbolMargin="0,0,0,15" SymbolResourceKey="" Margin="70,90" Click="Button_Click_2"/>
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Forplanet.lblForplanet" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" Grid.Column="2" Margin="70,95,85,0"/>
+        <vw:Button Grid.Row="0" Grid.Column="3" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMHVT}" SymbolVerticalAlignment="Bottom" SymbolMargin="8,0,0,40" Margin="70,90" Click="Button_Click_3"/>
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Dryer.Text8" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" HorizontalAlignment="Left" Symbol="{DynamicResource HMHVT}" Grid.Column="3" Margin="70,95,0,0"/>
+        <vw:Button Grid.Row="1" Grid.Column="1" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMHNT}" SymbolVerticalAlignment="Bottom" SymbolMargin="2,0,0,0" Margin="70,90" Click="Button_Click_6"/>
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Dryer.Text3" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" HorizontalAlignment="Left" Grid.Column="1" Margin="70,95,0,0" Grid.Row="1"/>
+        <vw:Button Grid.Row="1" Grid.Column="2" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="HandMenu" Symbol="{DynamicResource HMCrossTransport}" SymbolHorizontalAlignment="Center" SymbolMargin="0,0,0,10" SymbolResourceKey="" SymbolVerticalAlignment="Bottom" Margin="70,90" Click="Button_Click_7"/>
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Dryer.Text5" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" HorizontalAlignment="Left" Grid.Column="2" Margin="70,95,0,0" Grid.Row="1"/>
+        <vw:Button Grid.Row="1" Grid.Column="3" Width="320" Height="320" Padding="0,10,0,0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource FP_GrayButton}"  AuthorizationRight="HandMenu" Symbol="{DynamicResource Ventilator}" SymbolHorizontalAlignment="Center" SymbolMargin="0,0,0,10" SymbolResourceKey="" SymbolVerticalAlignment="Bottom" Margin="70,90" Click="Button_Click_5" />
+        <vw:TextBlock TextAlignment="Right" Height="40" Width="305" VerticalAlignment="Top"  LocalizableText="@HandMenu.Text4" Foreground="#FFFFFFFF" FontWeight="Bold" FontSize="22" HorizontalAlignment="Left" Grid.Column="3" Margin="70,95,0,0" Grid.Row="1"/>
+
+    </Grid>
+</vw:View>

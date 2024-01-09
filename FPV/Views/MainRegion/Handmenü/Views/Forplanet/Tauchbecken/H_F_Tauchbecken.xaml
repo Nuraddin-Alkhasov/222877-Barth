@@ -1,0 +1,30 @@
+﻿<vw:View x:Class="HMI.Handmenu.Forplanet.H_F_Tauchbecken"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Height="290" Width="1400" >
+                <vw:Label Margin="0,10,0,0" LocalizableText="@HandMenu.Forplanet.lblTauchbecken" Height="40" Width="560" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <vw:TextVarOut Width="560" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,110,0,0" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Schwenken Entlagen}, StateMode=Value}"/>
+		    	<vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,160,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Set Value.Position in mm" LocalizableUnitText="@Einheiten.mm" LocalizableLabelText="@HandMenu.Soll"/>
+                <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,160,420,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Aktuelle Position in mm" LocalizableUnitText="@Einheiten.mm" LocalizableLabelText="@HandMenu.Ist"/>
+                <vw:ComboBox Width="260" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,220,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Set Value.Vorwahl Position Textliste" StateList="{DynamicResource LTB Hub Vorwahl}" AuthorizationRight="HandMenu"/>
+		    	<vw:TextVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="580,56,0,0" LocalizableLabelText="@HandMenu.Forplanet.lblTauchbeckenVorhanden" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.State.Dipping Vat.vorhanden, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Nein / Ja}, StateMode=Value}" TextAlignment="Center"/>
+                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,56,420,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.LTB Nummer" LocalizableLabelText="@HandMenu.Forplanet.lblNummer"/>
+                <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Start" Style="{DynamicResource FP_BlueButton}" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.PC.Drive.Ein" KeyMode="KeyMode" AuthorizationRight="HandMenu"/>
+                <vw:Key Width="160" Height="80" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Stop" Style="{DynamicResource FP_RedButton}" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.PC.Drive.Aus" AuthorizationRight="HandMenu"/>
+            </Grid>
+        <Grid Grid.Row="1" Height="160" Width="1400" >
+            <vw:Label Margin="0,10,0,0" LocalizableText="@HandMenu.Forplanet.lblHubtüre" Height="40" Width="560" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Margin="0,60,0,0" Width="560" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.Status.Schieber, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Zylinder geöffnet / geschlossen}, StateMode=Value}"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.öffnen" Style="{DynamicResource FP_BlueButton}" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.PC.Schieber.öffen" AuthorizationRight="HandMenu"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Schließen" Style="{DynamicResource FP_BlueButton}" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.00 Allgemein.DB Beschichtung Allgemein HMI.PC.Schieber.schliessen" AuthorizationRight="HandMenu"/>
+        </Grid>
+    </Grid> 	
+</vw:View>

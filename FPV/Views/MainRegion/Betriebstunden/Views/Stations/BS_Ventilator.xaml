@@ -1,0 +1,130 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Betriebstunden.BS_Ventilator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="820" Height="570" >
+
+    <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}"   Width="800" Height="550" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" LocalizableHeaderText="@HandMenu.Text4">
+        <Grid>
+
+            <TabControl Margin="10" FontSize="14" TabStripPlacement="Left" BorderBrush="black" BorderThickness="1">
+                <TabItem x:Name="btn1"  Height="60" Width="150" Style="{DynamicResource TabItemStyle}"  Header="{vw:LocalizedTextExtension LocalizedText=@Betriebstunden.Text31}" Margin="0,10,0,-10" PreviewTouchDown="Btn1_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource FP_GrayButton}"  LocalizableText="@Betriebstunden.Text6" AuthorizationRight="Trend" Margin="0,0,40,40" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Reset"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Temporär.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Temporär.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Temporär.second"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Statisch.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Statisch.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Vorzone.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="btn2"   Style="{DynamicResource TabItemStyle}" Height="60" Width="150" Header="{vw:LocalizedTextExtension LocalizedText=@Betriebstunden.Text32}" Margin="0,20,0,-20" PreviewTouchDown="Btn3_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource FP_GrayButton}"  LocalizableText="@Betriebstunden.Text6" AuthorizationRight="Trend" Margin="0,0,40,40" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Reset"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Temporär.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Temporär.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Temporär.second"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Statisch.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Statisch.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Zwischenzone.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="btn3"   Style="{DynamicResource TabItemStyle}" Height="60" Width="150" Header="{vw:LocalizedText LocalizedText=@Betriebstunden.Text33}" Margin="0,30,0,-30" PreviewTouchDown="Btn4_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource FP_GrayButton}"  LocalizableText="@Betriebstunden.Text6" AuthorizationRight="Trend" Margin="0,0,40,40" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Reset"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Temporär.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Temporär.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Temporär.second"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Statisch.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Statisch.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; trockner.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="btn4"   Style="{DynamicResource TabItemStyle}" Height="60" Width="150" Header="{vw:LocalizedText LocalizedText=@Betriebstunden.Text34}" Margin="0,40,0,-40" PreviewTouchDown="Btn5_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource FP_GrayButton}"  LocalizableText="@Betriebstunden.Text6" AuthorizationRight="Trend" Margin="0,0,40,40" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Reset"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Temporär.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Temporär.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Temporär.second"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Statisch.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Statisch.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Kühlzone.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="btn5"   Style="{DynamicResource TabItemStyle}" Height="60" Width="150" Header="{vw:LocalizedText LocalizedText=@Betriebstunden.Text35}" Margin="0,50,0,-50" PreviewTouchDown="Btn6_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource FP_GrayButton}"  LocalizableText="@Betriebstunden.Text6" AuthorizationRight="Trend" Margin="0,0,40,40" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Reset"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Temporär.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Temporär.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Temporär.second"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Statisch.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Statisch.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Brenner.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="btn6"   Style="{DynamicResource TabItemStyle}" Height="60" Width="150" Header="{vw:LocalizedText LocalizedText=@Betriebstunden.Text36}" Margin="0,60,0,-60" PreviewTouchDown="Btn7_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource FP_GrayButton}"  LocalizableText="@Betriebstunden.Text6" AuthorizationRight="Trend" Margin="0,0,40,40" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Reset"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Temporär.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Temporär.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Temporär.second"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@Betriebstunden.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="14" LocalizableUnitText="@Einheiten.Stunden" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Statisch.Hour"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="14" LocalizableUnitText="@Einheiten.Min" AuthorizationRight="Parameter" RenderTransformOrigin="-0.5,1.125" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Statisch.Minute"/>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" FontSize="14" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Betriebsstunden.Heizung / Brenner.Venti&quot;_&quot; Brenner.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+        </Grid>
+    </vw:GroupBox>
+</vw:View>

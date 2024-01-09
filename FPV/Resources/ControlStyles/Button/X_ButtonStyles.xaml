@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:vw="http://inosoft.com/visiwin7">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/AppbarButtonStyle.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/CloseButton.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_BlueButton.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_GrayButton.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_GrayButton_DB.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_GreenButton.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_RedButton.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_FilterButton.xaml" />
+        <ResourceDictionary Source="/ForplanVisualization;component/Resources/ControlStyles/Button/FP_TKButton.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

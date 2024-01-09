@@ -1,0 +1,49 @@
+﻿<vw:View x:Class="HMI.Parameter.Forplanet.Parameter_Forplanet_1"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:vw="http://inosoft.com/visiwin7"
+               Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <vw:Border Background="{DynamicResource FP_Blue}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+            </vw:Border>
+            <vw:Label LocalizableText="@Parameter.Text57" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="1">
+          
+            <vw:GroupBox Width="500" Height="310" Margin="50,0,0,50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource GroupBoxStyle}" LocalizableHeaderText="@Parameter.Text31">
+                <Grid >
+                    <vw:Key   Width="160" Height="40"  Style="{DynamicResource FP_RedButton}" Margin="114,20,114,0" HorizontalAlignment="Center" VerticalAlignment="Top" KeyMode="KeyMode" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Membranpumpe.Pumpe Ein, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Membranpumpe}, StateMode=Value}" Text="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Membranpumpe.Pumpe Ein, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Ein / Aus}, StateMode=Value}" AuthorizationRight="Parameter" />
+                    <vw:Label Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,70,0,0" LocalizableText="@Parameter.Text32" FontSize="16" FontWeight="Bold"  />
+                    <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,115,60,0" LocalizableUnitText="@Einheiten.sek" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Membranpumpe.Ein Zeit.Second"/>
+                    <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,115,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Membranpumpe.Ein Zeit.Minute" LocalizableUnitText="@Einheiten.Min"/>
+                    <vw:Label Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,165,0,0" LocalizableText="@Parameter.Text33" FontSize="16" FontWeight="Bold"  />
+                    <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,208,60,0" LocalizableUnitText="@Einheiten.sek" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Membranpumpe.Aus Zeit.Second"/>
+                    <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,210,0,0" LocalizableUnitText="@Einheiten.Min" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Membranpumpe.Aus Zeit.Minute"/>
+                </Grid>
+            </vw:GroupBox>
+          
+            <vw:GroupBox Margin="50,50,0,0" Style="{DynamicResource GroupBoxStyle}" LocalizableHeaderText="@Parameter.Text34" Width="500" Height="275" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid>
+                    <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-35,50,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.LTB Temperatur" LocalizableUnitText="@Einheiten.grad_C" Foreground="White" Background="{DynamicResource FP_LightGreen}" LocalizableLabelText="@Parameter.Text35"/>
+                    <vw:NumericVarIn Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,80,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Set Value.Temperature.Soll Temperatur" LocalizableUnitText="@Einheiten.grad_C" LocalizableLabelText="@Parameter.Text36" FontSize="14" AuthorizationRight="Parameter"/>
+                    <vw:NumericVarIn Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,80,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Set Value.Temperature.Temp UG" LocalizableUnitText="@Einheiten.grad_C" LocalizableLabelText="@Parameter.Text37" FontSize="14" AuthorizationRight="Parameter"/>
+                    <vw:NumericVarIn Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,80,0" LocalizableUnitText="@Einheiten.grad_C" LocalizableLabelText="@Parameter.Text38" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Set Value.Temperature.Temp OG" FontSize="14" AuthorizationRight="Parameter"/>
+	                <vw:Switch Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" LocalizableTextOn="@Parameter.Lacktyp.Text30" LocalizableTextOff="@Parameter.Lacktyp.Text31" LocalizableLabelText="@Parameter.Text39" FontWeight="Normal" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.05 Tauchbecken.DB LTB HMI.Set Value.Temperature.Niveau Überwachung" Margin="0,170,80,0" AuthorizationRight="Parameter"/>
+                </Grid>
+            </vw:GroupBox>
+            <vw:Region x:Name="Ventilator1" Width="410" Height="340" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,400,0"  Loaded="Ventilator1_Loaded"/>
+            <vw:Region x:Name="Ventilator2" Width="410" Height="340" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,50,400,0"  Loaded="Ventilator2_Loaded"/>
+            <vw:Key Width="160" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20" Style="{DynamicResource FP_GrayButton}"  AuthorizationRight="Status" LocalizableText="@Parameter.Text71" VariableName="PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Abluft Quittieren" KeyMode="KeyMode"/>
+
+        </Grid>
+    </Grid>
+</vw:View>

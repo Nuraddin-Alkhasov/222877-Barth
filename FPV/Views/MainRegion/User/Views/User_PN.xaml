@@ -1,0 +1,27 @@
+﻿<vw:View  x:Class="HMI.User.User_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}" >
+
+    <Grid x:Name="LayoutRoot">
+        <vw:PanoramaNavigation Name="pn_benutzerverwaltung"  Orientation="Horizontal" IsManipulationEnabled="False">
+            <vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion StartView="User_Manager"/>
+                <vw:PanoramaRegion StartView="User_GroupManager" AuthorizationRight="UserManagement"/>
+            </vw:PanoramaNavigation.PanoramaRegions>
+        </vw:PanoramaNavigation>
+        <vw:ListBox ItemContainerStyle="{DynamicResource PanoramaNavigationListBoxItemStyle}" 
+                 ItemsPanel="{DynamicResource PanoramaNavigationItemTemplate}"  
+                 x:Name="ListBox" 
+                 HorizontalAlignment="Center" 
+                 SelectedIndex="{Binding SelectedPanoramaRegionIndex, ElementName=pn_benutzerverwaltung, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Background="{DynamicResource MainViewBackgroundBrush}"
+                 BorderThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,15" Opacity="0.5" AuthorizationMode="Visibility" AuthorizationRight="UserManagement">
+            <vw:ListBoxItem />
+            <vw:ListBoxItem />
+
+        </vw:ListBox>
+    </Grid>
+
+</vw:View>

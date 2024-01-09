@@ -1,0 +1,30 @@
+﻿<vw:View x:Class="HMI.Handmenu.Forplanet.H_F_Tauchbecken_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <vw:PanoramaNavigation Grid.Row="1" Orientation="Vertical" IsManipulationEnabled="False"  Name="pn_Tauchbecken" SelectedPanoramaRegionChanged="pn_Tauchbecken_SelectedPanoramaRegionChanged" >
+        <vw:PanoramaNavigation.PanoramaRegions >
+                <vw:PanoramaRegion StartView="H_F_Tauchbecken" AuthorizationRight="HandMenu"/>
+                <vw:PanoramaRegion StartView="H_F_Tauchbecken_Service" AuthorizationRight="Service"/>
+        </vw:PanoramaNavigation.PanoramaRegions>
+    </vw:PanoramaNavigation>
+        <vw:Button Grid.Row="1" Name="service"  Margin="0,0,10,10" Style="{DynamicResource FP_GrayButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="40" Width="160" Click="service_Click" LocalizableText="@HandMenu.Tasten.Service" AuthorizationRight="Service"/>
+        <vw:Button Grid.Row="1" Name="handmenu"  Margin="0,10,10,0" Style="{DynamicResource FP_GrayButton}" VerticalAlignment="Top" HorizontalAlignment="Right"  Height="40" Width="160" Click="handmenu_Click"  Visibility="Hidden" LocalizableText="@HandMenu.Tasten.HandMenu"/>
+        <vw:Border Background="{DynamicResource FP_Blue}" Height="110" VerticalAlignment="Top">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Border.Effect>
+        </vw:Border>
+        <vw:Label LocalizableText="@HandMenu.Forplanet.Text5" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" HorizontalContentAlignment="Left"/>
+	    <vw:TextVarOut Height="40" Width="180" Margin="0,35,35,35" LocalizableLabelText="@HandMenu.Text3" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Beschichten Status an BP.Anzeige_Betriebsart, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Betriebsart}, StateMode=Value}" FontSize="18.6666666666667" FontWeight="Bold" HorizontalAlignment="Right" TextAlignment="Center" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Beschichten Status an BP.Anzeige_Betriebsart, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource BSC_Betriebsart}, StateMode=Value}" Foreground="#FFFFFFFF"/>
+        <vw:PictureBox Width="80" Height="80" IsBlinkEnabled="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Mobile Panel connected, Converter={StaticResource BoolToBlinkConverter}}" Image="/ForplanVisualization;component/Images/MobilePanel.png" HorizontalAlignment="Center" BlinkMode="Visibility" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Mobile Panel connected, Converter={StaticResource BoolToVisConverter}}" VerticalAlignment="Center" Margin="800,0,0,0"/>
+
+    </Grid>
+</vw:View>

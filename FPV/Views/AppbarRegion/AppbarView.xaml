@@ -1,0 +1,46 @@
+﻿<vw:View xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+         x:Class="HMI.Views.Common.AppbarView" 
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+         xmlns:vw="http://inosoft.com/visiwin7" 
+         mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="980">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource FP_Dark}" Height="980">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="8" />
+
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" StrokeThickness="0" Fill="{DynamicResource FP_Red}" />
+        <StackPanel Grid.Column="0" Margin="10,10,0,0" VerticalAlignment="Top" Background="{x:Null}">
+            <vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion"  ViewName="DashboardBR" IsChecked="True"  VerticalAlignment="Top" Height="52" Margin="0,0,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.Text1" Symbol="{DynamicResource appbar.dashboard}" />
+        	<vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion" ViewName="Anlagenübersicht" IsChecked="false" VerticalAlignment="Top" Height="52"  Margin="0,10,0,0"  CornerRadius="4,0,0,4" BorderThickness="1,1,0,1" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.lblAnlageübersicht" Symbol="{DynamicResource appbar.home}" />
+            <vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion" ViewName="HandmenüPN" IsChecked="false"  VerticalAlignment="Top" Height="52" Margin="0,10,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.lblHandmenü" Symbol="{DynamicResource appbar.handmenu}" />
+            <vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion" ViewName="RC" IsChecked="false"  VerticalAlignment="Top" Height="52" Margin="0,10,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.lblRezeptverwaltung" Symbol="{DynamicResource appbar.recipe}" />
+         	<vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion"  ViewName="Parameter" IsChecked="false"  VerticalAlignment="Top" Height="52" Margin="0,10,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.lblParameter" Symbol="{DynamicResource appbar.parameters}"/>
+            <vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion"  ViewName="ProtocolPN" IsChecked="false"  VerticalAlignment="Top" Height="52" Margin="0,10,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.Text2" Symbol="{DynamicResource appbar.protocol}" SymbolHorizontalAlignment="Left" SymbolVerticalAlignment="Center"  />
+			<vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion" ViewName="Benutzerverwaltung" IsChecked="false"  VerticalAlignment="Top" Height="52" Margin="0,10,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.lblBenutzerübersicht" Symbol="{DynamicResource appbar.usermanagement}"/>
+            <vw:NavigationRadioButton HorizontalAlignment="Stretch" RegionName="MainRegion"  ViewName="DiagnosePN" IsChecked="false"  VerticalAlignment="Top" Height="52" Margin="0,10,0,0" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" LocalizableText="@Appbar.lblMeldungen" Symbol="{DynamicResource appbar.diagnose}"/>
+      
+        </StackPanel>
+	    <vw:Button Text=""  HorizontalAlignment="Left" Margin="10,699,0,0" Height="52" VerticalAlignment="Top" Symbol="{DynamicResource appbar.turnoff}" LocalizableText="@Appbar.Exit" SymbolHorizontalAlignment="Left" SymbolMargin="0,0,0,0" SymbolVerticalAlignment="Center" Foreground="#FFFFFFFF" Style="{DynamicResource AppbarButtonStyle}" AuthorizationRight="" Width="172">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <vw:ExitApplicationAction />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </vw:Button>
+	    <vw:Button Symbol="{DynamicResource appbar.languages}" Height="52" Margin="10,0,10,120" VerticalAlignment="Bottom" Text="{Binding CurrentLanguageName}" DataContext="{vw:AdapterBinding ChangeLanguageAdapter}" Command="{Binding ChangeLanguageCommand}" Style="{DynamicResource AppbarButtonStyle}" />
+	    <vw:Button DataContext="{vw:AdapterBinding UserLogOnOffAdapter}" Command="{Binding LogOnOffCommand}" Symbol="{DynamicResource appbar.user}" Height="52" Margin="10,0,10,65" VerticalAlignment="Bottom" Text="{vw:VariableBinding VariableName=__CURRENT_USER.NAME}" SymbolVerticalAlignment="Center" HorizontalContentAlignment="Left" Style="{DynamicResource AppbarButtonStyle}" />
+	    <vw:Button Text=""  HorizontalAlignment="Stretch" Margin="10,0,10,10" Height="52" VerticalAlignment="Bottom" Symbol="{DynamicResource appbar.turnoff}" LocalizableText="@Appbar.Exit" SymbolHorizontalAlignment="Left" SymbolMargin="0,0,0,0" SymbolVerticalAlignment="Center" Foreground="#FFFFFFFF" Style="{DynamicResource AppbarButtonStyle}" AuthorizationRight="Exit">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <vw:ExitApplicationAction />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </vw:Button>
+    </Grid>
+
+</vw:View>

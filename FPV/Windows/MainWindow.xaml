@@ -1,0 +1,102 @@
+﻿<vw:BaseWindow  
+    x:Class="HMI.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:con="clr-namespace:HMI.Converter"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+	vw:ApplicationManager.ApplicationManager="{StaticResource ApplicationManager}"         
+	ResizeMode="NoResize"
+    WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen"
+    Width="1920" Height="1080" >
+    <Window.Resources>
+        <con:BoolToBlinkConverter x:Key="BoolToBlinkConverter"/>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="205"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="205"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="80"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid x:Name="LayoutRoot" UseLayoutRounding="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <vw:Region x:Name="HeaderRegion" StartView="HeaderView" DesignTimeView="HeaderView" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <vw:Region x:Name="MainRegion" StartView="DB_DashboardView" DesignTimeView="DB_DashboardView" Grid.Row="1" Grid.Column="1" />
+        <Grid x:Name="GridMenu" Background="{DynamicResource FP_Dark}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Width="80" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="8" />
+            </Grid.ColumnDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
+            </Grid.Effect>
+            <Rectangle Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" StrokeThickness="0" Fill="{DynamicResource FP_Red}" >
+                <Rectangle.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Rectangle.Effect>
+            </Rectangle>
+            <StackPanel x:Name="aaa"  Grid.Column="0" Margin="10,10,0,0" VerticalAlignment="Top" Background="{x:Null}">
+                <vw:Button x:Name="ButtonCloseMenu" Background="Transparent" Visibility="Collapsed" Height="52" Width="62" Margin="0,10,0,10" HorizontalAlignment="Right" BorderBrush="{x:Null}" VerticalAlignment="Top" Click="ButtonCloseMenu_Click" Text="" IsDefault="True" IsEnabled="True" Symbol="{DynamicResource appbar.close}"/>
+                <vw:Button x:Name="ButtonOpenMenu" Background="Transparent"  Height="52" Width="62" Margin="0,10,0,10" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="ButtonOpenMenu_Click" Symbol="{DynamicResource appbar.open}" SymbolVerticalAlignment="Center" SymbolHorizontalAlignment="Left" Text=""/>
+                <vw:NavigationRadioButton x:Name="dashboard" RegionName="MainRegion"  ViewName="DB_DashboardView" IsChecked="True" Height="52" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" Symbol="{DynamicResource appbar.dashboard}" />
+                <vw:NavigationRadioButton x:Name="moverview" IsChecked="false" Height="52"  Margin="0,10,0,0"  Style="{DynamicResource AppbarNavigationRadioButtonStyle}"  Symbol="{DynamicResource appbar.home}" CheckMode="Manual" Click="Moverview_Click" />
+                <vw:NavigationRadioButton x:Name="handmode" IsChecked="false" Height="52" Margin="0,10,0,0"  Style="{DynamicResource AppbarNavigationRadioButtonStyle}" Symbol="{DynamicResource appbar.handmenu}" CheckMode="Manual" Click="Handmode_Click" AuthorizationRight="HandMenu"/>
+                <vw:NavigationRadioButton x:Name="recipe"  IsChecked="false" Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}"  Symbol="{DynamicResource appbar.recipe}" CheckMode="Manual" Click="Recipe_Click" AuthorizationRight="MachineRecipe" />
+                <vw:NavigationRadioButton x:Name="parameter" IsChecked="false" Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" Symbol="{DynamicResource appbar.parameters}" CheckMode="Manual" Click="Parameter_Click" AuthorizationRight="Parameter"/>
+                <vw:NavigationRadioButton x:Name="protocol" IsChecked="false"  Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}"  Symbol="{DynamicResource appbar.protocol}" Click="Protocol_Click" AuthorizationRight="Protocol"/>
+                <vw:NavigationRadioButton x:Name="logs" RegionName="MainRegion"  ViewName="LoggingView" IsChecked="false"  Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" Symbol="{DynamicResource appbar.log}" AuthorizationRight="Logging"/>
+                <vw:NavigationRadioButton x:Name="betriebstunden" RegionName="MainRegion"  ViewName="Betriebstunden_DB" IsChecked="false"  Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" Symbol="{DynamicResource appbar.BS}" AuthorizationRight="Logging" SymbolMargin="7,0,0,0"/>
+
+                <vw:NavigationRadioButton x:Name="usermanager" IsChecked="false"  Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}"  Symbol="{DynamicResource appbar.usermanagement}" Click="Usermanager_Click" AuthorizationRight="UserManagement"/>
+                <vw:NavigationRadioButton x:Name="diagnose" IsChecked="false"  Height="52" Margin="0,10,0,0" Style="{DynamicResource AppbarNavigationRadioButtonStyle}" Symbol="{DynamicResource appbar.diagnose}" Click="Diagnose_Click" AuthorizationRight="Diagnose"/>
+            </StackPanel>
+            <vw:Button x:Name="language" Symbol="{DynamicResource appbar.languages}" Height="52" Margin="10,0,10,150" VerticalAlignment="Bottom"  DataContext="{vw:AdapterBinding ChangeLanguageAdapter}" Command="{Binding ChangeLanguageCommand}" Style="{DynamicResource AppbarButtonStyle}" AuthorizationRight="Language">
+                <Label x:Name="langlabel" Margin="-5,0,0,0"  Content="{Binding CurrentLanguageName}" Height="50" Width="130" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="White" FontSize="14" FontFamily="Segoe UI"   FontWeight="Normal" Visibility="Hidden"/>
+            </vw:Button>
+
+            <vw:Button x:Name="user" DataContext="{vw:AdapterBinding UserLogOnOffAdapter}" Command="{Binding LogOnOffCommand}" Symbol="{DynamicResource appbar.user}" Height="52" Margin="10,0,10,85" VerticalAlignment="Bottom" Style="{DynamicResource AppbarButtonStyle}" >
+                <Label x:Name="userlabel" Margin="-5,0,0,0"  Content="{Binding CurrentUserFullName}" Height="50" Width="130" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="White" FontSize="14" FontFamily="Segoe UI"   FontWeight="Normal" Visibility="Hidden"/>
+            </vw:Button>
+            <vw:Button x:Name="turnoff" Text=""  HorizontalAlignment="Stretch" Margin="10,0,10,20" Height="52" VerticalAlignment="Bottom" Symbol="{DynamicResource appbar.turnoff}" Style="{DynamicResource AppbarButtonStyle}" AuthorizationRight="Exit" Click="Turnoff_Click">
+                
+            </vw:Button>
+        </Grid>
+
+        <Rectangle Height="8" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" StrokeThickness="0" Fill="{DynamicResource FP_Red}" VerticalAlignment="Bottom" >
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <vw:Region x:Name="DialogRegion" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <vw:Region x:Name="MessageBoxRegion" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <vw:Region x:Name="TouchpadRegion" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2"  />
+
+        <Grid  Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Background="{DynamicResource DialogSurroundBrush}" Visibility="{vw:VariableBinding VariableName=Temp.RecipeIsLaoding}">
+            <Border Width="460" Height="300" CornerRadius="5" Background="{DynamicResource FP_Dark}" >
+                <Image  gif:ImageBehavior.AnimatedSource="D:\ForplanVisualization\Images\Loading.gif" Stretch="None"/>
+            </Border>
+        </Grid>
+    </Grid>
+</vw:BaseWindow>

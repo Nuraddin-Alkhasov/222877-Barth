@@ -1,0 +1,107 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+    
+    <vw:StateCollection x:Key="_Ein / Aus">
+        <vw:State Text="Aus" Value="0" />
+        <vw:State Text="Ein" Value="1" />
+    </vw:StateCollection>
+
+
+    
+    <vw:StateCollection x:Key="Fahrwagen Vorwahl">
+        <vw:State Text="Trockner" Value="1" />
+        <vw:State Text="Kühlzone" Value="2" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="LTB Hub Vorwahl">
+        <vw:State Text="Unten" Value="1" />
+        <vw:State Text="Bereitstellung" Value="2" />
+        <vw:State Text="Außerhalb Schwenkbereich" Value="3" />
+        <vw:State Text="Schleudern" Value="4" />
+        <vw:State Text="Tauchen gekippt" Value="5" />
+        <vw:State Text="Tauchen gerade" Value="6" />
+        <vw:State Text="Korbwechsel Position" Value="7" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Mani Drehen Vorwahl">
+        <vw:State Text="Korb befüllen" Value="1" />
+        <vw:State Text="Beschichten" Value="2" />
+        <vw:State Text="Auskippstation" Value="3" />
+        <vw:State Text="Rückführung" Value="4" />
+        <vw:State Text="Korbwechsel" Value="5" />
+        <vw:State Text="Korbspeicher" Value="6" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Mani Hub Vorwahl">
+        <vw:State Text="Korb befüllen unten" Value="1" />
+        <vw:State Text="Korb befüllen oben" Value="2" />
+        <vw:State Text="Korbwechsel unten" Value="3" />
+        <vw:State Text="Korbwechsel oben" Value="4" />
+        <vw:State Text="Korbspeicher 1 unten" Value="5" />
+        <vw:State Text="Korbspeicher 1 oben" Value="6" />
+        <vw:State Text="Korbspeicher 2 unten" Value="7" />
+        <vw:State Text="Korbspeicher 2 oben" Value="8" />
+        <vw:State Text="Auskippstation unten" Value="9" />
+        <vw:State Text="Auskippstation oben" Value="10" />
+        <vw:State Text="Beschichten unten" Value="11" />
+        <vw:State Text="Beschichten oben" Value="12" />
+        <vw:State Text="Rückführung unten" Value="13" />
+        <vw:State Text="Rückführung oben" Value="14" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Mani Schlitten Vorwahl">
+        <vw:State Text="Eingefahren" Value="1" />
+        <vw:State Text="Korb befüllen" Value="2" />
+        <vw:State Text="Beschichten" Value="3" />
+        <vw:State Text="Auskippstation" Value="4" />
+        <vw:State Text="Rückführung" Value="5" />
+        <vw:State Text="Korbwechsel" Value="6" />
+        <vw:State Text="Korbspeicher 1" Value="7" />
+        <vw:State Text="Korbspeicher 2" Value="8" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="WB">
+        <vw:State LocalizableText="@TextList.WB.Text1" Value="0" />
+        <vw:State LocalizableText="@TextList.WB.Text2" Value="2" />
+        <vw:State LocalizableText="@TextList.WB.Text3" Value="1" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Palettenschieber Kühlzone Vorwahl">
+        <vw:State Text="Eingefahren" Value="1" />
+        <vw:State Text="Kühlzone" Value="2" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Palettenschieber Trockner Vorwahl">
+        <vw:State Text="Eingefahren" Value="1" />
+        <vw:State Text="Trockner" Value="2" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Schwenken Vorwahl">
+        <vw:State Text="Senkrecht" Value="1" />
+        <vw:State Text="Gekippt" Value="2" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="_Nein / Ja">
+        <vw:State Text="Nein" Value="0" />
+        <vw:State Text="Ja" Value="1" />
+    </vw:StateCollection>
+	
+	  <vw:StateCollection x:Key="Betriebsart">
+		<vw:State Text="- - - -" Value="0" />
+        <vw:State Text="Hand" Value="1" />
+        <vw:State Text="Einrichten" Value="2" />
+        <vw:State Text="FP_Green" Value="3" />
+    </vw:StateCollection>
+
+    <vw:StateCollection x:Key="Weekday">
+        <vw:State Text="Sonntag" Value="1" />
+        <vw:State Text="Montag" Value="2" />
+        <vw:State Text="Dienstag" Value="3" />
+        <vw:State Text="Mittwoch" Value="4" />
+        <vw:State Text="Donnerstag" Value="5" />
+        <vw:State Text="Freitag" Value="6" />
+        <vw:State Text="Samstag" Value="7" />
+    </vw:StateCollection>
+
+</ResourceDictionary>

@@ -1,0 +1,54 @@
+﻿<vw:View x:Class="HMI.Parameter.Parameter_KZ"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:con="clr-namespace:HMI.Converter"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <vw:Border Background="{DynamicResource FP_Blue}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+            </vw:Border>
+            <vw:Label LocalizableText="@Parameter.Text9" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" HorizontalContentAlignment="Left"/>
+        </Grid>
+        <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}" Width="390" Height="300" Margin="0,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" LocalizableHeaderText="@Parameter.Text9" Grid.Row="1" >
+            <Grid>
+                <vw:Key   Width="160" Height="40"  Style="{DynamicResource FP_RedButton}" Margin="210,20,0,0" LocalizableText="@Tasten.Text7" HorizontalAlignment="Left" VerticalAlignment="Top" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.PC.Abluft.Aus" AuthorizationRight="Parameter" />
+                <vw:Key   Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  Style="{DynamicResource FP_GrayButton}" Margin="20,20,0,0" BlinkBrush="{DynamicResource FP_LightGreen}" IsBlinkEnabled="{vw:VariableBinding Converter={StaticResource IntToBlinkConverter}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Ventilator}" Background="{vw:VariableBinding Converter={StaticResource ValueToStateBrushConverter}, StateMode=Value, States={StaticResource VentilatorStart}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Ventilator}" LocalizableText="@Tasten.Text6" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.PC.Abluft.Ein" KeyMode="KeyMode" AuthorizationRight="Parameter" />
+                <vw:Label Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,80,0,0" LocalizableText="@Parameter.Text3" FontSize="16" FontWeight="Bold"  />
+                <vw:Label Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,190,0,0" LocalizableText="@Parameter.Text4" FontSize="16"/>
+                <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,130,0,0" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Zeit bis Wiederanlauf.Second" LocalizableUnitText="@Einheiten.sek"/>
+                <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,0,0" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Zeit bis Wiederanlauf.Minute" LocalizableUnitText="@Einheiten.Min"/>
+                <Border Background="#FFFFFF00" Width="368" Height="110" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0" CornerRadius="4" Visibility="{vw:VariableBinding Converter={StaticResource BoolToVisConverter}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Spühlzeit aktiv}">
+                    <Grid >
+                        <vw:Label Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" LocalizableText="@Parameter.Text6" FontSize="16" FontWeight="Bold"  />
+                        <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Spühlzeit.Minute" LocalizableUnitText="@Einheiten.sek"/>
+                        <vw:NumericVarOut Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,60,0,0" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Zeit bis Wiederanlauf.Second" LocalizableUnitText="@Einheiten.Min"/>
+                    </Grid>
+                </Border>
+                <vw:Button x:Name="kds1" Style="{DynamicResource FP_GrayButton}" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0" Background="{vw:VariableBinding Converter={StaticResource ValueToStateBrushConverter}, StateMode=Value, States={StaticResource Druckschalter}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Druckschalter 1}" BlinkBrush="#FFFFFF00" IsBlinkEnabled="{vw:VariableBinding Converter={StaticResource BoolToBlinkConverterDS}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Status.Lüfter.Druckschalter 1}"    />
+            </Grid>
+        </vw:GroupBox>
+        <vw:GroupBox Grid.Row="1"  Style="{DynamicResource GroupBoxStyle}" Width="550" Height="225" Margin="0,200,0.2,0" HorizontalAlignment="Center" VerticalAlignment="Top" HeaderText="" LocalizableHeaderText="@Parameter.Text9" Grid.Column="1">
+            <Grid>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text36" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Sollwerte.Temperatur"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text74" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Sollwerte.Temperatur Differenz OG"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text75" LocalizableUnitText="@Einheiten.grad_C" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Sollwerte.Temperatur Differenz UG"/>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-35,60,0" FontSize="14" LocalizableLabelText="@Parameter.Text73" LocalizableUnitText="@Einheiten.grad_C" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Istwerte.Temperatur"/>
+            </Grid>
+
+        </vw:GroupBox>
+    </Grid>
+
+
+</vw:View>

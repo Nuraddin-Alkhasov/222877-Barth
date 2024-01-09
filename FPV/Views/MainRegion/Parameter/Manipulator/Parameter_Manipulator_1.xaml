@@ -1,0 +1,27 @@
+﻿<vw:View x:Class="HMI.Parameter.Manipulator.Parameter_Manipulator_1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+   Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <vw:Border Background="{DynamicResource FP_Blue}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+            </vw:Border>
+            <vw:Label LocalizableText="@HandMenu.Manipulator.Text8" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <vw:Region x:Name="maniReg"  Width="1180" Height="610" Margin="140,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.RowSpan="2"/>
+            <Grid Grid.RowSpan="2">
+                <vw:RadioButton x:Name="btnMH" Width="200" Height="70" HorizontalAlignment="Right" VerticalAlignment="Top"  Style="{DynamicResource RadioButtonStyle}"  Margin="0,140,160,0" Checked="btnMH_Checked"  LocalizableText="@Parameter.Text50" Loaded="BtnMH_Loaded"/>
+                <vw:RadioButton x:Name="btnMD" Width="200" Height="70" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Style="{DynamicResource RadioButtonStyle}"  Margin="0,0,160,140"  LocalizableText="@Parameter.Text51" Checked="btnMD_Checked"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</vw:View>

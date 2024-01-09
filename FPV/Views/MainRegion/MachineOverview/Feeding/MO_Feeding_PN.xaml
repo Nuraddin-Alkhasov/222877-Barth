@@ -1,0 +1,52 @@
+﻿<vw:View 
+    xmlns:UC="clr-namespace:HMI.UserControls" x:Class="HMI.Views.MainRegion.MachineOverview.MO_Feeding_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}" >
+
+    <Grid x:Name="LayoutRoot" >
+         
+
+		<vw:PanoramaNavigation  x:Name="pn_MO_Feeding" Height="800" SelectedPanoramaRegionChanged="Pn_MO_Feeding_SelectedPanoramaRegionChanged" VerticalAlignment="Top" Margin="0,130,0,0">
+	    	<vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion StartView="MO_LiftandTilter" />
+                <vw:PanoramaRegion StartView="MO_Werehaus" />
+                <vw:PanoramaRegion StartView="MO_Manipulator"/>
+                <vw:PanoramaRegion StartView="MO_BasketTilter"/>
+                
+            </vw:PanoramaNavigation.PanoramaRegions>
+	    </vw:PanoramaNavigation>
+        <ListBox ItemContainerStyle="{DynamicResource PanoramaNavigationListBoxItemStyle}" 
+                 ItemsPanel="{DynamicResource PanoramaNavigationItemTemplate}"  
+                 x:Name="ListBox" 
+                 HorizontalAlignment="Center" 
+                 SelectedIndex="{Binding SelectedPanoramaRegionIndex, ElementName=pn_MO_Feeding, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Background="{DynamicResource MainViewBackgroundBrush}"
+                 BorderThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,15" Opacity="0.5">
+            <ListBoxItem />
+            <ListBoxItem />
+            <ListBoxItem />
+            <ListBoxItem />
+        </ListBox>
+		<vw:Border Background="{DynamicResource FP_Blue}" Height="110" VerticalAlignment="Top">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Border.Effect>
+        </vw:Border>
+		 <vw:Label x:Name="header" LocalizableText="@MainOverview.Text8" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+
+	    <UC:M1_WorkMode HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,0,0"/>
+	    <Rectangle Fill="#FFFFFFFF" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1521,160,0,0"/>
+	    <vw:Label Height="25" LocalizableText="@MainOverview.Text9" Margin="1565,160,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+	    <vw:Label Height="25" LocalizableText="@MainOverview.Text10" Margin="1565,190,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+	    <Rectangle Fill="{DynamicResource FP_Dark}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1521,190,0,0"/>
+	    <Rectangle Fill="{DynamicResource FP_Blue}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1521,220,0,0"/>
+	    <vw:Label Height="25" LocalizableText="@MainOverview.Text11" Margin="1565,220,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+	    <vw:Label Height="25" LocalizableText="@MainOverview.Text12" Margin="1565,250,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+	    <Rectangle Fill="{DynamicResource FP_Yellow}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1521,250,0,0"/>
+	    <Rectangle Fill="{DynamicResource FP_Green}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1521,280,0,0"/>
+	    <vw:Label Height="25" LocalizableText="@MainOverview.Text13" Margin="1565,280,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+    </Grid> 	
+    
+</vw:View>

@@ -1,0 +1,53 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.MachineOverview.MO_DO_PStatus"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7" 
+	    Width="420" Height="290" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <vw:Button  Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Bunkerband, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}" LocalizableLabelText="@DataOverwrite.Text1" Margin="0,0,10,0"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text1" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0"/>
+        <vw:Button  Style="{DynamicResource FP_GrayButton}" Width="30" Height="30"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Dosierband, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}" LocalizableLabelText="@DataOverwrite.Text2" Grid.Row="1" Margin="0,0,10,0"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text2" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="1" />
+        <vw:Button  Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="2" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Korb befüllen, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text3" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="2" />
+        <vw:Button  Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Manipulator, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:TextBlock Margin="0,0,60,0" LocalizableText="@DataOverwrite.Text4" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="3" />
+        <vw:Button   Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="6" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Ofen Band 1, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text5" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="5" />
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Korb auskippen, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:TextBlock LocalizableText="@DataOverwrite.Text6" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="6" />
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text7" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Margin="0,0,60,0" />
+
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Beschichtung, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+
+        <vw:TextBlock LocalizableText="@DataOverwrite.Text8" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="2" Grid.Column="1" />
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text9" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Margin="0,0,60,0" Grid.Row="1" />
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Ofen Band 2, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text10" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="6" Grid.Column="1" />
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.HVT Fahrwagen, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text11" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="4"  />
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text12" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center"  Margin="0,0,60,0" Grid.Row="3" Grid.Column="1"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text13" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center"  Margin="0,0,60,0" Grid.Row="4" Grid.Column="1"/>
+        <vw:TextBlock  LocalizableText="@DataOverwrite.Text14" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center"  Margin="0,0,60,0" Grid.Row="5" Grid.Column="1"/>
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.HVT Palettenschieber, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.Tablett Auskippen, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.HNT Fahrwagen, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.HNT Palettenschieber, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+        <vw:Button  Text="" Style="{DynamicResource FP_GrayButton}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Background="{vw:VariableBinding VariableName=PLC.PLC.Blocks.10 HMI.01 PC.Prozessdaten überschreiben.DB PD überschreiben.Ist Pausiert.HVT Tablett auskippen Rückführung, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource Lamp}, StateMode=Value}"/>
+
+    </Grid>
+</vw:View>

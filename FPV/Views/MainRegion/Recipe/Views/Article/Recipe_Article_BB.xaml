@@ -1,0 +1,23 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_BB"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="440" Height="420" >
+
+    <Grid x:Name="LayoutRoot"  >
+        <vw:GroupBox   Style="{DynamicResource GroupBoxStyle}"   Width="420" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center" LocalizableHeaderText="@Rezeptverwaltung.HB.Text7" >
+            <Grid>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Bunkerband.Soll Gewicht" LocalizableLabelText="@Rezeptverwaltung.HB.Text1" LocalizableUnitText="@Einheiten.kg" AuthorizationRight="Article"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Bunkerband.Start Gewicht" LocalizableLabelText="@Rezeptverwaltung.HB.Text2" LocalizableUnitText="@Einheiten.kg" AuthorizationRight="Article"/>
+                <vw:GroupBox x:Name="O1" Style="{DynamicResource GroupBoxStyle}"   Width="380" Height="205" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,10,0" LocalizableHeaderText="@Rezeptverwaltung.HB.Text6"  >
+                    <Grid>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Bunkerband.Geschwindigkeit.Befüllen" LocalizableLabelText="@Rezeptverwaltung.HB.Text3" LocalizableUnitText="@Einheiten.m_min" AuthorizationRight="Article" RawLimitMin="1" RawLimitMax="6"/>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0"  FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Bunkerband.Geschwindigkeit.Folgeband befüllen" LocalizableLabelText="@Rezeptverwaltung.HB.Text4" LocalizableUnitText="@Einheiten.m_min" AuthorizationRight="Article" RawLimitMin="1" RawLimitMax="6"/>
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,110,80,0"  FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Bunkerband.Geschwindigkeit.Folgeband befüllen langsam" LocalizableLabelText="@Rezeptverwaltung.HB.Text5" LocalizableUnitText="@Einheiten.m_min" AuthorizationRight="Article" RawLimitMin="1" RawLimitMax="6"/>
+                    </Grid>
+                </vw:GroupBox>
+            </Grid>
+        </vw:GroupBox>
+    </Grid>
+</vw:View>

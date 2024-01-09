@@ -1,0 +1,18 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_KDS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="420" Height="225" >
+
+    <Grid x:Name="LayoutRoot"  >
+        <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}"   Width="400" Height="205" HorizontalAlignment="Center" VerticalAlignment="Center"  LocalizableHeaderText="@Rezeptverwaltung.BS.Text1" >
+            <Grid>
+                <vw:NumericVarIn x:Name="weightprobasket" Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Korbdrehen.Befüllgewicht je Korb" LocalizableLabelText="@Rezeptverwaltung.BS.Text2" LocalizableUnitText="@Einheiten.kg" AuthorizationRight="Article"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Korbdrehen.Gewicht diff_ langsam" LocalizableLabelText="@Rezeptverwaltung.BS.Text3" LocalizableUnitText="@Einheiten.kg" AuthorizationRight="Article"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,110,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Feeding.Korbdrehen.Befüllzeit" LocalizableLabelText="@Rezeptverwaltung.BS.Text4" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Article"/>
+            </Grid>
+        </vw:GroupBox>
+    </Grid>
+
+</vw:View>

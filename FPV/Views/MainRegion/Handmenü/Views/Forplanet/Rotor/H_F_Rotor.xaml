@@ -1,0 +1,16 @@
+﻿<vw:View x:Class="HMI.Handmenu.Forplanet.H_F_Rotor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid Width="1400" Height="290" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <vw:Label Margin="0,10,0,0" LocalizableText="@HandMenu.Forplanet.lblRotordrehantrieb" Height="40" Width="560" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <vw:TextVarOut Width="560" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.Istwerte.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Vorwärts / Rückwärts / Dreht}, StateMode=Value}"/>
+        <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,120,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.Sollwerte.Geschwindikeit von Visu" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Einheiten.U_min"/>
+        <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="820,120,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.Istwerte.Geschwindigkeit an Visu" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Einheiten.U_min"/>
+        <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Ein" Style="{DynamicResource FP_BlueButton}" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Ein" KeyMode="KeyMode" AuthorizationRight="HandMenu"/>
+        <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,0,0" Style="{DynamicResource FP_RedButton}" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Aus" KeyMode="KeyMode" LocalizableText="@HandMenu.Tasten.Stop" AuthorizationRight="HandMenu"/>
+        <vw:Key Width="160" Height="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0" Style="{DynamicResource FP_BlueButton}" LocalizableText="@HandMenu.Tasten.Hompos" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Positionieren" AuthorizationRight="HandMenu"/>
+    </Grid>
+</vw:View>

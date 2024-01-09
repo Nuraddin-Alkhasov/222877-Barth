@@ -1,0 +1,17 @@
+﻿<vw:View x:Class="HMI.Handmenu.Drayer.H_D_KAS_OB2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid >
+        <Grid  Width="1400" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <vw:Label Margin="0,30,0,0" LocalizableText="@HandMenu.Dryer.HVT.Text4" Height="40" Width="560" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="560" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Band WB}, StateMode=Value}"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" LocalizableText="@HandMenu.Tasten.Vorwärts" Style="{DynamicResource FP_BlueButton}" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.PC.Antrieb.Vorwärts" KeyMode="KeyMode" AuthorizationRight="HandMenu"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,0" Style="{DynamicResource FP_BlueButton}" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.PC.Antrieb.Rückwärts" KeyMode="KeyMode" LocalizableText="@HandMenu.Tasten.Rückwärts" AuthorizationRight="HandMenu"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Style="{DynamicResource FP_RedButton}" LocalizableText="@HandMenu.Tasten.Stop" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.PC.Antrieb.Aus" AuthorizationRight="HandMenu"/>
+            <vw:NumericVarIn Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,140,0,0" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Set Value.Bandantrieb Geschwindigkeit m/min" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Einheiten.m_min" AuthorizationRight="HandMenu"/>
+            <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="820,140,0,0" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Actual value.Bandantrieb Geschwindigkeit m/min" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Einheiten.m_min"/>
+        </Grid>
+    </Grid>
+</vw:View>

@@ -1,0 +1,17 @@
+﻿<vw:View x:Class="HMI.Views.MainRegion.ExportView"
+         x:Name="exportView_View"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	     xmlns:vw="http://inosoft.com/visiwin7"
+         Background="{DynamicResource MainViewBackgroundBrush}" Width="680" Height="245"
+         DataContext="{vw:AdapterBinding Name=TrendExportAdapter}" IsVisibleChanged="ExportView_View_IsVisibleChanged">
+
+    <Grid x:Name="LayoutRoot">
+        <vw:DateTimeVarIn x:Name="dateTimeVarInStarttime" Margin="60,20,0,0" Value="{Binding StartTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="40" Width="250" HorizontalAlignment="Left" VerticalAlignment="Top" LocalizableLabelText="@TrendSystem.Views.Text6" AuthorizationRight="Trend"/>
+        <vw:DateTimeVarIn x:Name="dateTimeVarInStoptime" Margin="370,20,0,0" Value="{Binding StopTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="40" Width="250" HorizontalAlignment="Left" VerticalAlignment="Top" LocalizableLabelText="@TrendSystem.Views.Text5" AuthorizationRight="Trend"/>
+        <vw:Button x:Name="buttonStartExportToFile" Command="{Binding ExportToFileCommand}" LocalizableText="@TrendSystemBenutzerText.Views.ExportView.ExportData" Margin="370,140,0,0" IsEnabled="{Binding StartExportToFileIsEnabled}" Width="250" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource FP_GrayButton}" AuthorizationRight="Trend"/>
+        <vw:NumericVarIn x:Name="numericVarInTimeSpanSeconds" LocalizableLabelText="@TrendSystemBenutzerText.Views.ExportView.Timespan" Value="{Binding TrendDataSeconds, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="250" Margin="370,80,0,0" VariableName="__UNLINKED_I2" Height="40" VerticalAlignment="Top" LocalizableUnitText="@Einheiten.sek" LabelText="Punkteabstand" AuthorizationRight="Trend"/>
+        <ProgressBar x:Name="progressBar" Height="25" Margin="20,0,20,20" Value="{Binding ExportProgress, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Bottom"/>
+    </Grid>
+
+</vw:View>

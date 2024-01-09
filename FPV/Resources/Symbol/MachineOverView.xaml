@@ -1,0 +1,129 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <DataTemplate x:Key="MachineOverview">
+        <Image Source="/Images/MachineOverview/MachineOverview.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="CoatingOverview1">
+        <Image Source="/Images/MachineOverview/Coating/CoatingOverview1.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="CoatingOverview2">
+        <Image Source="/Images/MachineOverview/Coating/CoatingOverview2.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="Oven1">
+        <Image Source="/Images/MachineOverview/Oven/Oven1.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="Oven2">
+        <Image Source="/Images/MachineOverview/Oven/Oven2.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="OvenX">
+        <Image Source="/Images/MachineOverview/Oven/MO_Ofen.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="HNT_O1">
+        <Image Source="/Images/MachineOverview/Oven/HNT_O1.png" Stretch="Fill" Width="429" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="HNT_O2">
+        <Image Source="/Images/MachineOverview/Oven/HNT_O2.png" Stretch="Fill" Width="429" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVT_O1">
+        <Image Source="/Images/MachineOverview/Oven/HVT_O1.png" Stretch="Fill" Width="376" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVT_O2">
+        <Image Source="/Images/MachineOverview/Oven/HVT_O2.png" Stretch="Fill" Width="376" Height="1000" />
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="Manipulator1">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator1.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator2">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator2.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator3">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator3.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator4">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator4.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator5">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator5.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator6">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator6.png" Stretch="Fill" Width="1840" Height="1000"/>
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator7">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator7.png" Stretch="Fill" Width="1840" Height="1000"/>
+    </DataTemplate>
+    <DataTemplate x:Key="Manipulator8">
+        <Image Source="/Images/MachineOverview/Manipulator/Manipulator8.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="Werehaus1">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus1.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus2">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus2.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus3">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus3.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus4">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus4.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus5">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus5.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus6">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus6.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus7">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus7.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus8">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus8.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus9">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus9.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus10">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus10.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus11">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus11.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="Werehaus12">
+        <Image Source="/Images/MachineOverview/Werehaus/Werehaus12.png" Stretch="Fill" Width="451" Height="800" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="BasketTilter1">
+        <Image Source="/Images/MachineOverview/BasketTilter/BasketTilter1.png" Stretch="Fill" Width="839" Height="800" />
+    </DataTemplate>
+    <DataTemplate x:Key="BasketTilter2">
+        <Image Source="/Images/MachineOverview/BasketTilter/BasketTilter2.png" Stretch="Fill" Width="839" Height="800" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="LiftandTilter1">
+        <Image Source="/Images/MachineOverview/LiftandTilter/LiftandTilter1.png" Stretch="Fill" Width="1815" Height="990" />
+    </DataTemplate>
+    <DataTemplate x:Key="LiftandTilter2">
+        <Image Source="/Images/MachineOverview/LiftandTilter/LiftandTilter2.png" Stretch="Fill" Width="1815" Height="990" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="CrossTransport1">
+        <Image Source="/Images/MachineOverview/CrossTransport/Crosstransport1.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="CrossTransport2">
+        <Image Source="/Images/MachineOverview/CrossTransport/Crosstransport2.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="CrossTransport3">
+        <Image Source="/Images/MachineOverview/CrossTransport/Crosstransport3.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+    <DataTemplate x:Key="CrossTransport4">
+        <Image Source="/Images/MachineOverview/CrossTransport/Crosstransport4.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+</ResourceDictionary>

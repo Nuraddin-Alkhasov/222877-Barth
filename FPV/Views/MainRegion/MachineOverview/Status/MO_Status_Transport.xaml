@@ -1,0 +1,26 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.MachineOverview.MO_Status_Transport"
+          
+	        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	        xmlns:vw="http://inosoft.com/visiwin7" 
+	        Width="830" Height="373" >
+
+    <Grid>
+        <vw:GroupBox HeaderText="Header" Height="257" VerticalAlignment="Top" Width="830" HorizontalAlignment="Center" Style="{DynamicResource GroupBoxStyle}" LocalizableHeaderText="@StatusView.Text31">
+            <Grid >
+                <vw:Switch Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text33" FontWeight="Normal" IsEnabled="False" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Paletten Schieber.DB HVT Palettenschieber Status.Allgemein.Transport in Ofen aktiv" Style="{DynamicResource SwitchStyle}"/>
+                <vw:Switch Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,110,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text35" FontWeight="Normal" IsEnabled="False" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Ofen.Tablett[5].Status.Charge.Material vorhanden" Style="{DynamicResource SwitchStyle}"/>
+                <vw:Switch Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,60,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text34" FontWeight="Normal" IsEnabled="False" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Paletten Schieber.DB HVT Palettenschieber Status.Bereich.Material Start von Band" Style="{DynamicResource SwitchStyle}"/>
+                <vw:Switch Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,160,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text36" FontWeight="Normal" IsEnabled="False" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 PD.Status.Charge.Material vorhanden" Style="{DynamicResource SwitchStyle}"/>
+                <vw:Key Width="160" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,160,8,0" Style="{DynamicResource FP_GrayButton}" Text="Delete Data" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Paletten Schieber.DB HVT Palettenschieber Status.Allgemein.Transport in Ofen aktiv, Converter={StaticResource BoolToVisConverter}}" AuthorizationRight="Status" LocalizableText="@Tasten.Text10" IsEnabled="True" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Paletten Schieber.DB HVT Palettenschieber HMI.Set Value.Transport Reset" />
+            </Grid>
+        </vw:GroupBox>
+        <vw:GroupBox Height="106" Width="830" LocalizableHeaderText="@StatusView.Text32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,267,0,0" Style="{DynamicResource GroupBoxStyle}">
+            <Grid>
+                <vw:Key Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="658,10,0,0" Style="{DynamicResource FP_GrayButton}" Text="Delete Data"  Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.04 HNT.03 Paletten Schieber.DB HNT Palettenschieber Status.Allgemein.Transport in Kühlzone aktiv, Converter={StaticResource BoolToVisConverter}}" AuthorizationRight="Status" LocalizableText="@Tasten.Text10" IsEnabled="True" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.04 HNT.03 Paletten Schieber.DB HNT Palettenschieber HMI.Set Value.Transport Reset" />
+                <vw:Switch Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text33" FontWeight="Normal" IsEnabled="False" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.04 HNT.03 Paletten Schieber.DB HNT Palettenschieber Status.Allgemein.Transport in Kühlzone aktiv" Style="{DynamicResource SwitchStyle}"/>
+            </Grid>
+        </vw:GroupBox>
+    </Grid>
+</vw:View>

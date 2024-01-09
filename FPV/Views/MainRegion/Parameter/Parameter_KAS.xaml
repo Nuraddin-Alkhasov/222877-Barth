@@ -1,0 +1,52 @@
+﻿<vw:View x:Class="HMI.Parameter.Parameter_KAS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+   Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <vw:Border Background="{DynamicResource FP_Blue}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+            </vw:Border>
+            <vw:Label LocalizableText="@HandMenu.Dryer.Text2" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}"   Width="560" Height="330" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,190" LocalizableHeaderText="@Parameter.Text65">
+                <Grid>
+                    <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-35,50,0" FontSize="14" LocalizableLabelText="@Parameter.Text20" LocalizableUnitText="@Einheiten.mm" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Actual value.Bandantrieb Position in mm"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text66" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Parameter.Position.Bandlänge"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text67" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Parameter.Position.Übergabeposition"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text68" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Parameter.Position.Position Band voll"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,170,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text69" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Parameter.Position.Fahrweg Band leer"/>
+	                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,220,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text93" LocalizableUnitText="@Einheiten.m_min" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.10 Korb Auskippen.04 Band 1 zu Ofen.DB Korb Auskippen Band 1 HMI.Parameter.Restentleegeschwindigkeit"/>
+                </Grid>
+            </vw:GroupBox>
+            <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}"   Width="560" Height="330" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" LocalizableHeaderText="@Parameter.Text70">
+                <Grid>
+                    <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-35,50,0" FontSize="14" LocalizableLabelText="@Parameter.Text20" LocalizableUnitText="@Einheiten.mm" RenderTransformOrigin="1.5,-3" BlinkBrush="{DynamicResource FP_LightGreen}" Foreground="White" Background="{DynamicResource FP_LightGreen}" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Actual value.Bandantrieb Position in mm"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text66" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Parameter.Position.Bandlänge"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text67" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Parameter.Position.Übergabeposition"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text68" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Parameter.Position.Position Band voll"/>
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,170,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text69" LocalizableUnitText="@Einheiten.mm" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Parameter.Position.Fahrweg Band leer"/>
+	                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,220,90,0" FontSize="14" LocalizableLabelText="@Parameter.Text93" LocalizableUnitText="@Einheiten.m_min" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Ofen Band 2.DB Ofen Band 2 HMI.Parameter.Restentleegeschwindigkeit"/>
+                </Grid>
+            </vw:GroupBox>
+            <Grid Margin="0,10,0,0" Width="560" Height="140" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}" LocalizableHeaderText="@Parameter.Text94" >
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,90,0" LocalizableLabelText="@Parameter.Text96" LocalizableUnitText="@Einheiten.sek" AuthorizationRight="Parameter" FormatString="0" RawLimitMin="0" RawLimitMax="59" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.02 Tablett Auskippen.Kippantrieb.DB Tablett Kippantrieb HMI.Parameter.Klopfzeit"/>
+
+                    </StackPanel>
+                </vw:GroupBox>
+                <vw:TextBlock Height="25" Width="180" LocalizableText="@Parameter.Text95"  Margin="0,14,194,0" TextAlignment="Right" FontSize="14" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <vw:Switch  Margin="0,6,50,0" Width="132" Height="34" HorizontalAlignment="Right" LocalizableTextOn="@Tasten.Text6" LocalizableTextOff="@Tasten.Text7" Style="{DynamicResource SwitchStyle_v2}" VerticalAlignment="Top" AuthorizationRight="Parameter" VariableName="PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.02 Tablett Auskippen.Kippantrieb.DB Tablett Kippantrieb HMI.PC.Gerneral.Klopfen Ein / Aus"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</vw:View>

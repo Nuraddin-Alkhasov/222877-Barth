@@ -1,0 +1,17 @@
+﻿<vw:View
+	x:Class="HMI.Views.MainRegion.MachineOverview.MO_Manipulator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="800" Initialized="View_Initialized">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:PictureBox HorizontalAlignment="Center" VerticalAlignment="Center" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.08 Manipulator.00 Allgemein.DB Mani Allgemein HMI.PC.Status Bildanzeige Mani, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource ManiList}, StateMode=Value}" />
+        <vw:Button Background="Transparent" BorderThickness="0" Margin="595,90,860,155" Click="Button_Click" Tag="Basket*1*5*0" />
+
+        <vw:PictureBox x:Name="mani_B" Margin="985,318,0,0" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.08 Manipulator.00 Allgemein.DB Manipulator PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource Mani_Basket}, StateMode=Value}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="162" Height="119" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.08 Manipulator.00 Allgemein.DB Manipulator PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}" Tag="Basket*1*5*0" TouchDown="PictureBox_TouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown"  />
+        <vw:Switch Width="160" HorizontalAlignment="Right" LocalizableTextOn="@Tasten.Text6" LocalizableTextOff="@Tasten.Text7"  VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.08 Manipulator.00 Allgemein.DB Mani Allgemein HMI.PC.Gerneral.Ventilator Aus" AuthorizationRight="Status" Style="{DynamicResource SwitchStyle_v2}" Margin="0,610,150,150" LocalizableLabelText="@MainOverview.Text47" />
+
+    </Grid>
+
+</vw:View>

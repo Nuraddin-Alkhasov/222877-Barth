@@ -1,0 +1,86 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.MachineOverview.MO_Status_BasketF"
+          
+	        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	        xmlns:vw="http://inosoft.com/visiwin7" 
+	        IsVisibleChanged="View_IsVisibleChanged">
+
+    <StackPanel>
+
+        <vw:GroupBox Margin="10" HeaderText="Header" Style="{DynamicResource GroupBoxStyle}" LocalizableHeaderText="@StatusView.Text23">
+            <Grid Width="850">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="10">
+                    <vw:TextVarOut x:Name="pon" Width="240" Height="40"  VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Header.Produktionsnummer#STRING40"  LocalizableLabelText="@Datenauswahl.Text2" HorizontalAlignment="Right" />
+                    <vw:TextVarOut x:Name="mr" Width="240" Height="40" LocalizableLabelText="@Datenauswahl.Text5" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Header.Maschinenprogramm#STRING40" ValueChanged="mr_ValueChanged" PreviewTouchDown="Mr_PreviewTouchDown" PreviewMouseLeftButtonDown="Mr_PreviewMouseLeftButtonDown"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="10">
+                    <vw:TextVarOut x:Name="an" Width="240" Height="40"  VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Header.Artikelmummer#STRING40"  LocalizableLabelText="@Datenauswahl.Text4" HorizontalAlignment="Right" />
+                    <vw:TextVarOut x:Name="rd" Width="240" Height="40" LocalizableLabelText="@Datenauswahl.Text6" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="__UNLINKED_BSTR" />
+                    <vw:TextVarOut x:Name="user" Width="240" Height="40" LocalizableLabelText="@Datenauswahl.Text7" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Header.User#STRING40" />
+                </StackPanel>
+            </Grid>
+        </vw:GroupBox>
+        <vw:GroupBox LocalizableHeaderText="@StatusView.Text12" Margin="10" Style="{DynamicResource GroupBoxStyle}" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="10">
+                    <vw:NumericVarOut Width="160" Height="40" LocalizableLabelText="@Datenauswahl.Text8" HorizontalAlignment="Right" VerticalAlignment="Center"  BlinkBrush="{DynamicResource FP_Blue}" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Charge.Chargen Nummer" AuthorizationRight="Status"/>
+                    <vw:NumericVarOut Width="160" Height="40" LocalizableLabelText="@Datenauswahl.Text10" Margin="0,10,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Charge.Chargen Gewicht" FormatString="0.0"  />
+                    <vw:NumericVarOut Width="160" Height="40" LocalizableLabelText="@Datenauswahl.Text11" Margin="0,10,0,0" HorizontalAlignment="Right" VerticalAlignment="Center"  VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Charge.Aktueller Durchlauf" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="10">
+                    <vw:Switch Width="160" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text9"  VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Charge.Material vorhanden" AuthorizationRight="Status" Style="{DynamicResource SwitchStyle}" IsEnabled="False" />
+                    <vw:ComboBox x:Name="paintTYP" Width="250" HorizontalAlignment="Right" Height="40" Margin="0,10,0,0" LocalizableLabelText="@StatusView.Text2"  BlinkBrush="{DynamicResource FP_Blue}" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Charge.Lacktyp" AuthorizationRight="Status"/>
+                    <Grid Margin="0,10,0,0" >
+                        <vw:Button x:Name="btn_Save" Width="160" Height="40" HorizontalAlignment="Left" Style="{DynamicResource FP_GrayButton}" Click="btn_Save_Click" AuthorizationRight="Status" LocalizableText="@Tasten.Text8"/>
+                        <vw:Button x:Name="btn_Delete" Width="160" Height="40" HorizontalAlignment="Right" Style="{DynamicResource FP_GrayButton}" Click="btn_Delete_Click" AuthorizationRight="Status" LocalizableText="@Tasten.Text9"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </vw:GroupBox>
+        <vw:GroupBox Margin="10" LocalizableHeaderText="@StatusView.Text11" Style="{DynamicResource GroupBoxStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="10">
+                    <vw:RadioButton  Style="{DynamicResource GBRadioButtonStyle}" LocalizableLabelText="@StatusView.Text8">
+                        <StackPanel Margin="10">
+                            <vw:Switch Width="160" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text9" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.04 Befüllen.03 Korb beladen Drehstation.DB KBD Status.Allgemein.Korb 1 Material.vorhanden"  AuthorizationRight="Status"  Style="{DynamicResource SwitchStyle}"/>
+                            <vw:Switch x:Name="isBasket1" Width="160" Height="40" HorizontalAlignment="Right" Margin="0,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text1" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Korb 1 links.Belegt" AuthorizationRight="Status"  Style="{DynamicResource SwitchStyle}"/>
+                            <vw:Switch Width="160" Height="40" HorizontalAlignment="Right" Margin="0,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text30" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.04 Befüllen.03 Korb beladen Drehstation.DB KBD Status.Allgemein.Korb 1 befüllt"  Style="{DynamicResource SwitchStyle}"/>
+                            <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Right" Margin="0,10,0,0" LocalizableLabelText="@StatusView.Text5" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Korb 1 links.Gewicht" FormatString="0.0"   />
+                            <vw:Button x:Name="btn_Deleteb1" Height="40" Margin="0,10,0,0" Style="{DynamicResource FP_GrayButton}" Click="Btn_Deleteb1_Click"  AuthorizationRight="Status" LocalizableText="@Tasten.Text9" />
+                        </StackPanel>
+                    </vw:RadioButton>
+                    <vw:ComboBox x:Name="paintTYP2" Width="300" HorizontalAlignment="Right" Height="40" Margin="0,10,0,0" LocalizableLabelText="@StatusView.Text2"  BlinkBrush="{DynamicResource FP_Blue}" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Korb 1 links.Lacktyp" Opacity="1" AuthorizationRight="Status" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="10">
+                    <vw:RadioButton LocalizableLabelText="@StatusView.Text7" Style="{DynamicResource GBRadioButtonStyle}">
+                        <StackPanel Margin="10">
+                            <vw:Switch Width="160" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text9" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.04 Befüllen.03 Korb beladen Drehstation.DB KBD Status.Allgemein.Korb 2 Material.vorhanden" Style="{DynamicResource SwitchStyle}" />
+                            <vw:Switch x:Name="isBasket2" Width="160" Height="40" HorizontalAlignment="Right" Margin="0,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text1" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Korb 1 links.Belegt" AuthorizationRight="Status" Style="{DynamicResource SwitchStyle}"  />
+                            <vw:Switch Width="160" Height="40" HorizontalAlignment="Right" Margin="0,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text30" AuthorizationRight="Status" VariableName="PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.04 Befüllen.03 Korb beladen Drehstation.DB KBD Status.Allgemein.Korb 2 befüllt" Style="{DynamicResource SwitchStyle}" />
+
+                            <vw:NumericVarOut Width="160" Height="40" Margin="0,10,0,0"   HorizontalAlignment="Right" LocalizableLabelText="@StatusView.Text5" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Korb 2 rechts.Gewicht" FormatString="0.0"   />
+                            <vw:Button x:Name="btn_Deleteb2" Height="40" Margin="0,10,0,0" Style="{DynamicResource FP_GrayButton}" Click="Btn_Deleteb2_Click"  AuthorizationRight="Status" LocalizableText="@Tasten.Text9" />
+
+                        </StackPanel>
+                    </vw:RadioButton>
+                    <vw:Switch Width="160" Height="40" HorizontalAlignment="Right" Margin="0,10,0,0" LocalizableTextOn="@StatusView.Text24" LocalizableTextOff="@StatusView.Text25" LocalizableLabelText="@StatusView.Text3" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC Status Platz.Daten Station.Status.Korb 1 links.Ausschleusen" Name="basketsOUT" AuthorizationRight="Status" Style="{DynamicResource SwitchStyle}"/>
+
+                </StackPanel>
+         
+            </Grid>
+        </vw:GroupBox>
+    </StackPanel>
+</vw:View>

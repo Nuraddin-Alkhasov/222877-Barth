@@ -1,0 +1,15 @@
+﻿<vw:View
+	x:Class="HMI.Views.MainRegion.MachineOverview.MO_Werehaus"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="800">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:PictureBox Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.3 Modul 1 ZF MA Auskippen.08 Manipulator.00 Allgemein.DB Mani Allgemein HMI.PC.Status Bildanzeige Korbregal, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource WerehausList}, StateMode=Value}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <vw:Button Width="378" Height="264" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="738,18,0,0" BorderThickness="0,0,0,0" Click="Button_Click"  Background="#00FFFFFF" Tag="Basket*1*7*0"/>
+        <vw:Button Width="378" Height="174" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="738,312,0,0" BorderThickness="0,0,0,0"  Click="Button_Click"  Background="#00FFFFFF" Tag="Basket*1*6*0"/>
+        <vw:Button Width="378" Height="224" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="738,542,0,0" BorderThickness="0,0,0,0" Click="Button_Click"   Background="#00FFFFFF" Tag="Basket*1*8*0"/>
+    </Grid>
+
+</vw:View>

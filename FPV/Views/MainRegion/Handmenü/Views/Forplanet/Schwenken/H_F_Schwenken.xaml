@@ -1,0 +1,28 @@
+﻿<vw:View x:Class="HMI.Handmenu.Forplanet.H_F_Schwenken"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Width="1400" Height="290" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <vw:Label Margin="0,10,0,0" LocalizableText="@HandMenu.Forplanet.lblSchwenkantrieb" Height="40" Width="560" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="560" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.Istwerte.Position Tesxtliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Schwenken Entlagen}, StateMode=Value}" />
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Stop" Style="{DynamicResource FP_RedButton}" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.PC.Drive.Aus" AuthorizationRight="HandMenu"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Start" Style="{DynamicResource FP_BlueButton}" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.PC.Drive.Ein" AuthorizationRight="HandMenu"/>
+            <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,120,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.Sollwerte.Position von Panel in Grad" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Einheiten.grad"/>
+            <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="820,120,0,0" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.Istwerte.Position in Grad" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Einheiten.grad"/>
+            <vw:ComboBox Width="260" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,180,0,0" StateList="{DynamicResource Schwenken Vorwahl}" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.Sollwerte.Position von Panel in Grad" AuthorizationRight="HandMenu"/>
+        </Grid>
+        <Grid Grid.Row="1" Width="1400" Height="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <vw:Label Margin="0,10,0,0" LocalizableText="@HandMenu.Forplanet.lblAbstecker" Height="40" Width="560" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="560" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.Status.Abstecker.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource Zylinder 2 Endlagen}, StateMode=Value}" />
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Verriegeln" Style="{DynamicResource FP_BlueButton}" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.PC.Abstecker.Zu" KeyMode="KeyMode" AuthorizationRight="HandMenu"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableText="@HandMenu.Tasten.Entriegeln" Style="{DynamicResource FP_BlueButton}" KeyMode="KeyMode" VariableName="PLC.PLC.Blocks.4 Modul 2 Beschichtung.15 Schwenken.DB BS Schwenken HMI.PC.Abstecker.Auf" AuthorizationRight="HandMenu"/>
+        </Grid>
+    </Grid>
+</vw:View>

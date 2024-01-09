@@ -1,0 +1,21 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        Width="1840" Height="880" Background="{StaticResource MainViewBackgroundBrush}" >
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:Region x:Name="region_Article" Height="720" VerticalAlignment="Center" Margin="0,0,0,0" Width="1180" HorizontalAlignment="Center" />
+         <vw:RadioButton x:Name="btnLTD" Width="200" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top"  Style="{DynamicResource RadioButtonStyle}"   Checked="btnLTD_Checked" LocalizableText="@Rezeptverwaltung.LTD.lblHebekippgeraet" Margin="65,80,0,0" Loaded="BtnLTD_Loaded" />
+                <vw:RadioButton x:Name="btnBB" Width="200" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top"  Style="{DynamicResource RadioButtonStyle}"  Margin="65,300,0,0" Checked="btnBB_Checked" LocalizableText="@Rezeptverwaltung.HB.Text7" />
+                <vw:RadioButton x:Name="btnDB" Width="200" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Style="{DynamicResource RadioButtonStyle}"  Margin="65,0,0,300" Checked="btnDB_Checked" LocalizableText="@Rezeptverwaltung.DB.Text1" />
+                <vw:RadioButton x:Name="btnKAB1" Width="200" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource RadioButtonStyle}"  Margin="1575,300,0,0" Checked="btnKAB1_Checked" LocalizableText="@Rezeptverwaltung.Text10" />
+                <vw:RadioButton x:Name="btnKAB2" Width="200" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top"  Style="{DynamicResource RadioButtonStyle}"  Margin="1575,510,0,0" LocalizableText="@Rezeptverwaltung.Text9" Checked="btnKAB2_Checked" />
+        <vw:RadioButton x:Name="btnKDS" Width="200" Height="70" HorizontalAlignment="Right" VerticalAlignment="Top"  Style="{DynamicResource RadioButtonStyle}"  Margin="0,730,1575,0" Checked="btnKDS_Checked" LocalizableText="@Rezeptverwaltung.BS.Text1" />
+                <vw:RadioButton x:Name="btnAK" Width="200" Height="70" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource RadioButtonStyle}"  Margin="0,80,65,730" Checked="btnAK_Checked" LocalizableText="@Rezeptverwaltung.TB.Text1" />
+                <vw:RadioButton x:Name="btnTA" Width="200" Height="70" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource RadioButtonStyle}"  Margin="0,730,65,0" LocalizableText="@Rezeptverwaltung.TTO.Text1" Checked="btnTA_Checked" />
+
+        
+    </Grid>
+</vw:View>

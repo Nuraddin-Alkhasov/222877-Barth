@@ -1,0 +1,26 @@
+﻿<vw:View
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_PN"
+        Width="1840" Height="1000" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:Border Height="110" VerticalAlignment="Top" Background="{DynamicResource FP_Blue}" >
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Border.Effect>
+        </vw:Border>
+        <vw:Label x:Name="HeaderTxt" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" Text="" />
+        <vw:TextVarOut x:Name="Rname" VerticalAlignment="Top"  Margin="0,10,300,0" VariableName="Recipe.Article.Name" Width="500"  Height="40" FontSize="16" HorizontalAlignment="Right" LocalizableLabelText="@RecipeSystem.View.RecipeName" FontWeight="Bold" AuthorizationMode="Visibility" AuthorizationRight="MachineRecipe"/>
+        <vw:TextVarOut x:Name="Descr"  VerticalAlignment="Top" Margin="0,60,300,0" VariableName="Recipe.Article.Description" Width="500"   Height="40" FontSize="16"  HorizontalAlignment="Right" LocalizableLabelText="@RecipeSystem.View.Description" FontWeight="Bold" AuthorizationMode="Visibility" AuthorizationRight="MachineRecipe" />
+        <vw:Button   Margin="0,10,70,0" Width="160"  Style="{DynamicResource FP_GrayButton}" LocalizableText="@RecipeSystem.View.Buttons.Verwalt" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="90" Click="Button_Click" AuthorizationMode="Visibility" AuthorizationRight="MachineRecipe"/>
+        <vw:PanoramaNavigation Name="pn_recipe" Orientation="Vertical" Height="886" Margin="0,114,0,0" SelectedPanoramaRegionIndex="1" SelectedPanoramaRegionChanged="pn_recipe_SelectedPanoramaRegionChanged" >
+            <vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion AuthorizationRight="MachineRecipe"/>
+                <vw:PanoramaRegion StartView="Recipe_Machine" AuthorizationRight="MachineRecipe"/>
+                <vw:PanoramaRegion AuthorizationRight="MachineRecipe" />
+            </vw:PanoramaNavigation.PanoramaRegions>
+        </vw:PanoramaNavigation>
+    </Grid>
+</vw:View>

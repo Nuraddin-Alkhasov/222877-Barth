@@ -1,0 +1,252 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:vw="http://inosoft.com/visiwin7">
+
+    <vw:SymbolStateCollection x:Key="CrossTransportList">
+        <vw:SymbolState Value="1" Symbol="{DynamicResource CrossTransport1}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource CrossTransport2}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource CrossTransport3}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource CrossTransport4}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="CrossTransportTablet">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Tablet_1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Tablet_2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Tablet_3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource Tablet_4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource Tablet_5}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="CrossTransportBasket">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Basket_1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Basket_2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Basket_3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource Basket_4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource Basket_5}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="CrossTransportBelt">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Belt_1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Belt_2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Belt_3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource Belt_4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource Belt_5}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="CrossTransportBox">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Box_1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Box_2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Box_3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource Box_4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource Box_5}"/>
+    </vw:SymbolStateCollection>
+	
+	<vw:SymbolStateCollection x:Key="BSList">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource CoatingOverview1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource CoatingOverview2}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="BSBasket">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource BS_1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource BS_2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource BS_3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource BS_4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource BS_5}"/>
+    </vw:SymbolStateCollection>
+
+	  <vw:SymbolStateCollection x:Key="OvenList">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Oven1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Oven2}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="OvenTablet1">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Oven_1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Oven_2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Oven_3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource Oven_4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource Oven_5}"/>
+    </vw:SymbolStateCollection>
+	 <vw:SymbolStateCollection x:Key="OvenTablet2">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource OvenT1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource OvenT2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource OvenT3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource OvenT4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource OvenT5}"/>
+    </vw:SymbolStateCollection>
+    
+	<vw:SymbolStateCollection x:Key="OvenBand">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource OvenBand1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource OvenBand2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource OvenBand3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource OvenBand4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource OvenBand5}"/>
+    </vw:SymbolStateCollection>
+	
+	<vw:SymbolStateCollection x:Key="OvenHVT">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource Oven_HVT1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Oven_HVT2}"/>
+		<vw:SymbolState Value="2" Symbol="{DynamicResource Oven_HVT3}"/>
+		<vw:SymbolState Value="3" Symbol="{DynamicResource Oven_HVT4}"/>
+		<vw:SymbolState Value="4" Symbol="{DynamicResource Oven_HVT5}"/>
+    </vw:SymbolStateCollection>
+
+
+    <vw:SymbolStateCollection x:Key="BasketTilterList">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource BasketTilter1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource BasketTilter2}"/>
+    </vw:SymbolStateCollection>
+
+	 <vw:SymbolStateCollection x:Key="HVTList">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource HVTB1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource HVTB2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource HVTB3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource HVTB4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource HVTB5}"/>
+    </vw:SymbolStateCollection>
+	
+    <vw:SymbolStateCollection x:Key="HVT_Basket">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource HVTB1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource HVTB2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource HVTB3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource HVTB4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource HVTB5}"/>
+    </vw:SymbolStateCollection>
+	
+    <vw:SymbolStateCollection x:Key="HVT_Band1">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource HVTBelt11}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource HVTBelt12}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource HVTBelt13}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource HVTBelt14}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource HVTBelt15}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="HVT_Band2">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource HVTBelt21}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource HVTBelt22}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource HVTBelt23}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource HVTBelt24}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource HVTBelt25}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="MOV_FT">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVFT1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVFT2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVFT3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVFT4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVFT5}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_TT1">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVTT11}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVTT12}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVTT13}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVTT14}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVTT15}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_TT2">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVTT21}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVTT22}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVTT23}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVTT24}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVTT25}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_TT3">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVTT31}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVTT32}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVTT33}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVTT34}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVTT35}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_TT4">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVTT41}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVTT42}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVTT43}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVTT44}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVTT45}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_Box">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVBox1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVBox2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVBox3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVBox4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVBox5}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_B">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVB1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVB2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVB3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVB4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVB5}"/>
+    </vw:SymbolStateCollection>
+	
+	 <vw:SymbolStateCollection x:Key="MOV_TB">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVTB1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVTB2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVTB3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVTB4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVTB5}"/>
+    </vw:SymbolStateCollection>
+	
+	<vw:SymbolStateCollection x:Key="MOV_OB">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource MOVOB1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource MOVOB2}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource MOVOB3}"/>
+        <vw:SymbolState Value="3" Symbol="{DynamicResource MOVOB4}"/>
+        <vw:SymbolState Value="4" Symbol="{DynamicResource MOVOB5}"/>
+    </vw:SymbolStateCollection>
+	
+ <vw:SymbolStateCollection x:Key="LTList">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource LiftandTilter1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource LiftandTilter2}"/>
+    </vw:SymbolStateCollection>
+   
+	 <vw:SymbolStateCollection x:Key="WerehausList">
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Werehaus1}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Werehaus2}"/>
+		<vw:SymbolState Value="3" Symbol="{DynamicResource Werehaus3}"/>
+		<vw:SymbolState Value="4" Symbol="{DynamicResource Werehaus4}"/>
+		<vw:SymbolState Value="5" Symbol="{DynamicResource Werehaus5}"/>
+		<vw:SymbolState Value="6" Symbol="{DynamicResource Werehaus6}"/>
+		<vw:SymbolState Value="7" Symbol="{DynamicResource Werehaus7}"/>
+		<vw:SymbolState Value="8" Symbol="{DynamicResource Werehaus8}"/>
+		<vw:SymbolState Value="9" Symbol="{DynamicResource Werehaus9}"/>
+		<vw:SymbolState Value="10" Symbol="{DynamicResource Werehaus10}"/>
+		<vw:SymbolState Value="11" Symbol="{DynamicResource Werehaus11}"/>
+		<vw:SymbolState Value="12" Symbol="{DynamicResource Werehaus12}"/>
+    </vw:SymbolStateCollection>
+	
+	<vw:SymbolStateCollection x:Key="ManiList">
+        <vw:SymbolState Value="1" Symbol="{DynamicResource Manipulator1}"/>
+        <vw:SymbolState Value="2" Symbol="{DynamicResource Manipulator2}"/>
+		<vw:SymbolState Value="3" Symbol="{DynamicResource Manipulator3}"/>
+		<vw:SymbolState Value="4" Symbol="{DynamicResource Manipulator4}"/>
+		<vw:SymbolState Value="5" Symbol="{DynamicResource Manipulator5}"/>
+		<vw:SymbolState Value="6" Symbol="{DynamicResource Manipulator6}"/>
+		<vw:SymbolState Value="7" Symbol="{DynamicResource Manipulator7}"/>
+		<vw:SymbolState Value="8" Symbol="{DynamicResource Manipulator8}"/>
+    </vw:SymbolStateCollection>
+	
+	<vw:SymbolStateCollection x:Key="Mani_Basket">
+        <vw:SymbolState Value="0" Symbol="{DynamicResource ManiB1}"/>
+        <vw:SymbolState Value="1" Symbol="{DynamicResource ManiB2}"/>
+		<vw:SymbolState Value="2" Symbol="{DynamicResource ManiB3}"/>
+		<vw:SymbolState Value="3" Symbol="{DynamicResource ManiB4}"/>
+		<vw:SymbolState Value="4" Symbol="{DynamicResource ManiB5}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="Oven_HVT">
+        <vw:SymbolState Value="1" Symbol="{DynamicResource HVT_O1}"/>
+        <vw:SymbolState Value="0" Symbol="{DynamicResource HVT_O2}"/>
+    </vw:SymbolStateCollection>
+
+    <vw:SymbolStateCollection x:Key="Oven_HNT">
+        <vw:SymbolState Value="1" Symbol="{DynamicResource HNT_O1}"/>
+        <vw:SymbolState Value="0" Symbol="{DynamicResource HNT_O2}"/>
+    </vw:SymbolStateCollection>
+
+</ResourceDictionary>

@@ -1,0 +1,40 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.MachineOverview.MO_Status_Recipe"
+          
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	            xmlns:vw="http://inosoft.com/visiwin7" 
+ 
+	            Width="1920" Height="1080" Background="{DynamicResource DialogSurroundBrush}" IsVisibleChanged="View_IsVisibleChanged">
+
+    <Border MinHeight="300" MaxHeight="700" Width="500" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <Border.Effect>
+            <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+        </Border.Effect>
+        <Grid Background="{DynamicResource FP_Dark}" >
+            <vw:Label x:Name="HeaderText"  Margin="10,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" Height="32" LocalizableText="@StatusView.Text16" />
+            <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource CloseButton}" Width="60" Height="35" Text="X" Margin="0,-1,10,0" Click="CloseDialog"/>
+            <StackPanel Margin="0,50,0,0"> 
+                <vw:GroupBox LocalizableHeaderText="@StatusView.Text17" Margin="10" Style="{DynamicResource GroupBoxStyle}" >
+                    <StackPanel Margin="10">
+                        <vw:TextVarOut x:Name="MR" Width="240" Height="40"   VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Main Recipe.Machine Recipe" LocalizableLabelText="@StatusView.Text17" HorizontalAlignment="Right" />
+                        <vw:TextVarOut x:Name="MR_descr" Width="240" Height="40"  LocalizableLabelText="@Datenauswahl.Text6" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="Recipe.MachineRecipe.ArticleDesciption" />
+                    </StackPanel>
+                </vw:GroupBox>
+                <vw:GroupBox LocalizableHeaderText="@StatusView.Text22" Margin="10,0,10,10" Style="{DynamicResource GroupBoxStyle}" >
+                    <StackPanel Margin="10">
+                        <vw:TextVarOut x:Name="BS1" Width="240" Height="40" LocalizableLabelText="@StatusView.Text18" HorizontalAlignment="Right" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Main Recipe.C1" />
+                        <vw:TextVarOut x:Name="BS1descr" Width="240" Height="40"  LocalizableLabelText="@Datenauswahl.Text6" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="Recipe.MachineRecipe.C1Description" />
+                        <vw:TextVarOut x:Name="BS2" Width="240" Height="40" LocalizableLabelText="@StatusView.Text19" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Main Recipe.C2" />
+                        <vw:TextVarOut x:Name="BS2descr" Width="240" Height="40"  LocalizableLabelText="@Datenauswahl.Text6" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="Recipe.MachineRecipe.C2Description" />
+                        <vw:TextVarOut x:Name="BS3" Width="240" Height="40" LocalizableLabelText="@StatusView.Text20" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Main Recipe.C3" />
+                        <vw:TextVarOut x:Name="BS3descr" Width="240" Height="40"  LocalizableLabelText="@Datenauswahl.Text6" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="Recipe.MachineRecipe.C3Description" />
+                        <vw:TextVarOut x:Name="BS4" Width="240" Height="40" LocalizableLabelText="@StatusView.Text21" Margin="0,10,0,0" HorizontalAlignment="Right" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Main Recipe.C4" />
+                        <vw:TextVarOut x:Name="BS4descr" Width="240" Height="40"  LocalizableLabelText="@Datenauswahl.Text6" Margin="0,10,0,0" HorizontalAlignment="Right"  VariableName="Recipe.MachineRecipe.C4Description" />
+                    </StackPanel>
+                </vw:GroupBox>
+            </StackPanel>
+        </Grid>
+        
+    </Border>
+</vw:View>

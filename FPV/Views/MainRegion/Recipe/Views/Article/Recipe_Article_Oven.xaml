@@ -1,0 +1,24 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_Oven"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="440" Height="310" >
+
+    <Grid x:Name="LayoutRoot"  >
+        <vw:GroupBox  Style="{DynamicResource GroupBoxStyle}"   Width="400" Height="290" HorizontalAlignment="Center" VerticalAlignment="Center" LocalizableHeaderText="@Rezeptverwaltung.Oven.Text1" >
+            <Grid>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Ofen.Temperatur" LocalizableLabelText="@Rezeptverwaltung.Oven.Text2" LocalizableUnitText="@Einheiten.grad" AuthorizationRight="Article"/>
+                <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.Ofen.Lacktyp" LocalizableLabelText="@Rezeptverwaltung.Oven.Text3" AuthorizationRight="Article"/>
+
+
+                <vw:GroupBox x:Name="O1" Style="{DynamicResource GroupBoxStyle}"   Width="360" Height="105" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,120,10,0" LocalizableHeaderText="@Rezeptverwaltung.Pusher.Text3" >
+                    <vw:NumericVarIn Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,80,0" FontSize="14" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Temp MR.HVT Schieber.Geschwindigkeit schieben" LocalizableUnitText="@Einheiten.%" LocalizableLabelText="@Rezeptverwaltung.Pusher.Text2" AuthorizationRight="Article"/>
+                </vw:GroupBox>
+            </Grid>
+        </vw:GroupBox>
+    
+
+    </Grid>
+
+</vw:View>

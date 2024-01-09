@@ -1,0 +1,19 @@
+﻿<vw:View
+    x:Class="HMI.User.User_EKS"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	Width="560" Height="260" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:TextVarOut x:Name="status" Height="32" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="0,10,10,0"  VerticalAlignment="Top" Width="320" Background="LightGray" VariableName="__UNLINKED_BSTR" LabelText="Status" />
+        <vw:TextVarIn x:Name="data" LostKeyboardFocusBehavior="WriteInput" Height="32" HorizontalAlignment="Right" Margin="0,68,10,0" VerticalAlignment="Center" Width="206" LabelText="Data" TextLengthMin="4"  VariableName="__UNLINKED_BSTR" TextLengthMax="5" AuthorizationRight="DeviceManagement"/>
+        <vw:Button x:Name="openConnection" Height="40" Width="160" Style="{DynamicResource FP_GrayButton}"  Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="OpenConnection_Click" AuthorizationRight="DeviceManagement" LocalizableText="@Admin.Text1"/>
+        <vw:Button x:Name="closeConnection" Height="40" Width="160" Style="{DynamicResource FP_GrayButton}"   Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CloseConnection_Click" AuthorizationRight="DeviceManagement" LocalizableText="@Admin.Text2"/>
+        <vw:Button x:Name="CheckConnection" Height="40" Width="160" Style="{DynamicResource FP_GrayButton}"  Margin="10,110,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CheckConnection_Click" AuthorizationRight="DeviceManagement" LocalizableText="@Admin.Text3"/>
+        <vw:Button x:Name="readData" Height="40" Width="160" Style="{DynamicResource FP_GrayButton}"  Margin="10,160,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ReadData_Click" AuthorizationRight="DeviceManagement" LocalizableText="@Admin.Text4"/>
+        <vw:Button x:Name="writeData" Height="40" Width="160" Style="{DynamicResource FP_GrayButton}"   Margin="10,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="WriteData_Click" AuthorizationRight="DeviceManagement" LocalizableText="@Admin.Text5"/>
+        <vw:Button x:Name="updateStatus" Height="40" Width="160" Style="{DynamicResource FP_GrayButton}"  Margin="390,47,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="UpdateStatus_Click" AuthorizationRight="DeviceManagement" LocalizableText="@Admin.Text6"/>
+    </Grid>
+
+</vw:View>

@@ -1,0 +1,21 @@
+﻿<vw:View x:Class="HMI.HeaderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        Height="80" Width="1920" Background="{DynamicResource FP_Dark}">
+
+    <Grid x:Name="LayoutRoot" >
+        <Border x:Name="AlarmLabel" Margin="0,48,0,0" Background="{DynamicResource FP_Red}" Height="32" VerticalAlignment="Top" PreviewTouchDown="AlarmLabel_PreviewTouchDown" Visibility="Hidden">
+            <Label x:Name="AlarmText" Margin="10,0" Foreground="White" FontWeight="SemiBold" FontSize="16" />
+        </Border>
+        <Border BorderBrush="White" BorderThickness="1" Height="35" Margin="8,8,0,0" Width="100" Background="White" CornerRadius="1" HorizontalAlignment="Left" Padding="0,0,0,0" VerticalAlignment="Top">
+            <Image Source="/ForplanVisualization;component/Images/HeaderRegion.png" Margin="4,4,4,4" />
+        </Border>
+        <vw:Clock HorizontalAlignment="Right" DateTimeMode="DateOnly" FontSize="12" FontWeight="Normal" Foreground="#FFFFFFFF" FormatDate="@NamedLongDate" FontFamily="Segoe UI" Margin="0,0,8,56" Width="250" Height="24" HorizontalContentAlignment="Right"/>
+        <vw:Clock HorizontalAlignment="Right" DateTimeMode="TimeOnly" FontSize="14" Foreground="#FFFFFFFF" FontFamily="Segoe UI" FontWeight="Bold" Margin="0,24,8,0" Width="151.5" Height="24" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <vw:TextVarOut x:Name="xxx" Height="35" Width="300" VariableName="PLC.PLC.Blocks.10 HMI.01 PC.DB PC.Data to PC.Variable" Margin="0,6.5,0,0" VerticalAlignment="Top" Background="{DynamicResource FP_Red}" Foreground="Transparent" Visibility="Hidden" />
+        <vw:TextVarOut x:Name="aaa" Height="35" Width="300" Margin="0,6,0,0" VerticalAlignment="Top" Background="{DynamicResource FP_Red}" Foreground="#FFFFFFFF" TextAlignment="Center" Value="Kopplung zur SPS Gestört" FontWeight="Normal" FontSize="14"/>
+
+    </Grid>
+
+</vw:View>

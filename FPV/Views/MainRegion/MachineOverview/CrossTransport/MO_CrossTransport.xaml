@@ -1,0 +1,92 @@
+﻿<vw:View
+	xmlns:UC="clr-namespace:HMI.UserControls" x:Class="HMI.Views.MainRegion.MachineOverview.MO_CrossTransport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="1000" Initialized="View_Initialized">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:Border Background="{DynamicResource FP_Blue}" Height="110" VerticalAlignment="Top">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Border.Effect>
+        </vw:Border>
+        <vw:Label LocalizableText="@MainOverview.Text5" Height="110" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+        <vw:PictureBox Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Fahrwagen.02 Fahrantrieb.DB HVT Fahrwagen HMI.PC.Status Bildanzeige Quertransport, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportList}, StateMode=Value}" />
+
+        <vw:PictureBox Height="102" Width="155" Margin="933,366,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Fahrwagen.00 Allgemein.DB HVT Fahrwagen Tablett PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Fahrwagen.00 Allgemein.DB HVT Fahrwagen Tablett PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}" x:Name="mat_t"/>
+        <vw:Button Height="133" Width="255" Margin="683,199,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" Tag="Tablet*3*9*26" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+            <vw:Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="37.558"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </vw:Button.RenderTransform>
+        </vw:Button>
+
+        <vw:PictureBox Height="102" Width="155" Margin="840,298,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[30].Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[30].Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"  PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*9*30"/>
+        <vw:PictureBox Height="102" Width="155" Margin="794,263,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[29].Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[29].Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"  PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*9*29"/>
+        <vw:PictureBox Height="102" Width="155" Margin="747,229,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[28].Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[28].Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"  PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*9*28"/>
+        <vw:PictureBox Height="102" Width="155" Margin="701,195,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[27].Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[27].Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"  PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*9*27" />
+        <vw:PictureBox Height="102" Width="155" Margin="655,161,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[26].Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[26].Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"  PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*9*26" />
+        <vw:Button Height="76" Width="155" Margin="555,525,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Background="Transparent" BorderThickness="0" Tag="Tablet*3*8*1" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+            <vw:Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-32.153"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </vw:Button.RenderTransform>
+        </vw:Button>
+
+        <vw:PictureBox Height="102" Width="155" Margin="887,332,0,0" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[31].Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportTablet}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.07 Tracking / Kommunikation.Tracking Kühlzone.Tablett[31].Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}" PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*9*31"/>
+       
+        <vw:PictureBox Height="102" Width="155" Margin="887,332,0,0" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.02 Tablett Auskippen.Allgemein.DB Tablett Auskippen PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, StateMode=Value, States={StaticResource CrossTransportTablet}}" Visibility="{vw:VariableBinding Converter={StaticResource BoolToVisConverter}, VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.02 Tablett Auskippen.Allgemein.DB Tablett Auskippen PD.Status.Charge.Material vorhanden}" PreviewTouchDown="PictureBox_PreviewTouchDown" MouseLeftButtonDown="PictureBox_MouseLeftButtonDown" Tag="Tablet*3*4*0"/>
+        <vw:Button Height="56" Width="155" Margin="880,349,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" Tag="Tablet*3*4*0" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+            <vw:Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-33.17"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </vw:Button.RenderTransform>
+        </vw:Button>
+        <vw:Button x:Name="mat_t2"  Height="57" Width="155" Margin="933,386,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" Tag="Tablet*3*2*0" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+            <vw:Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-30.441"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </vw:Button.RenderTransform>
+        </vw:Button>
+
+        <vw:PictureBox Height="98" Width="138" Margin="971,484,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Fahrwagen.00 Allgemein.DB HVT Fahrwagen Korb PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportBasket}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.02 HVT.Fahrwagen.00 Allgemein.DB HVT Fahrwagen Korb PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}" x:Name="mat_b" />
+        <vw:Button x:Name="mat_b2" Height="98" Width="138" Margin="971,484,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Background="Transparent" BorderThickness="0" Tag="Basket*3*1*0" Click="Button_Click"/>
+
+        <vw:PictureBox Height="113" Width="168" Margin="1001,227,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.03 Ausschleusse Band / Hub / Box / Vereinzelung.Ausschleusse Band.DB Ausschleusse Band PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportBelt}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.03 Ausschleusse Band / Hub / Box / Vereinzelung.Ausschleusse Band.DB Ausschleusse Band PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"/>
+        <vw:Button Height="113" Width="168" Margin="1001,227,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"  Background="Transparent" BorderThickness="0" Tag="Belt*3*5*0" Click="Button_Click"/>
+
+        <vw:PictureBox Height="65" Width="87" Margin="1185,246,0,0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Symbol="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.03 Ausschleusse Band / Hub / Box / Vereinzelung.Box.DB Ausschleusse Box PD.Status.Charge.Aktuelle Beschichtung, Converter={StaticResource ValueToStateSymbolConverter}, States={StaticResource CrossTransportBox}, StateMode=Value}" Visibility="{vw:VariableBinding VariableName=PLC.PLC.Blocks.5 Modul 3 Trockner.03 Ausschleussen.03 Ausschleusse Band / Hub / Box / Vereinzelung.Box.DB Ausschleusse Box PD.Status.Charge.Material vorhanden, Converter={StaticResource BoolToVisConverter}}"/>
+        <vw:Button Height="65" Width="87" Margin="1185,246,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Background="Transparent" BorderThickness="0" Tag="Belt*3*6*0" Click="Button_Click"/>
+
+     
+        <Rectangle Fill="#FFFFFFFF" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,160,0,0"/>
+        <vw:Label Height="25" LocalizableText="@MainOverview.Text9" Margin="204,160,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+        <vw:Label Height="25" LocalizableText="@MainOverview.Text10" Margin="204,190,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="{DynamicResource FP_Dark}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,190,0,0"/>
+        <Rectangle Fill="{DynamicResource FP_Blue}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,220,0,0"/>
+        <vw:Label Height="25" LocalizableText="@MainOverview.Text11" Margin="204,220,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+        <vw:Label Height="25" LocalizableText="@MainOverview.Text12" Margin="204,250,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="{DynamicResource FP_Yellow}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,250,0,0"/>
+        <Rectangle Fill="{DynamicResource FP_Green}" Width="40" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,280,0,0"/>
+        <vw:Label Height="25" LocalizableText="@MainOverview.Text13" Margin="204,280,0,0" HorizontalContentAlignment="Left" FontWeight="Normal" FontSize="16" Foreground="White" Width="235" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+       <UC:M3_WorkMode HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,130,20,0"/>
+		</Grid>
+
+</vw:View>

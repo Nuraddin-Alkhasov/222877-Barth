@@ -1,0 +1,45 @@
+﻿<vw:View
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Selector" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7" 
+	    Width="1920" Height="1080" Background="{DynamicResource DialogSurroundBrush}" IsVisibleChanged="View_IsVisibleChanged">
+
+    <Border  Width="800" Height="550" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border.Effect>
+            <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+        </Border.Effect>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="52" />
+                <RowDefinition Height="95"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <vw:Label x:Name="HeaderText"  Margin="10,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" Height="32" LocalizableText="@Rezeptverwaltung.Text6" />
+            <Grid Grid.Row="1" Margin="10,10,10,0">
+                <vw:Label HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" Height="40" LocalizableText="@RecipeSystem.View.RecipeName" Width="163" />
+                <vw:Label HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="White" FontSize="16" FontWeight="Bold" Height="40" LocalizableText="@RecipeSystem.View.Description" Width="163"  />
+                <vw:TextVarOut x:Name="tbName"  Value="{Binding RecipeNameBuffer, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" Width="610"  Height="40" FontSize="16" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold"/>
+                <vw:TextVarOut x:Name="tbDescription" Margin="0,5,0,0" Value= "{Binding RecipeDescriptionBuffer, Mode=TwoWay}"  VariableName="__UNLINKED_BSTR" Width="610"  Height="40" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontWeight="Bold"/>
+            </Grid>
+
+            <DataGrid Grid.Row="2" x:Name="RSdgv_recipe" ItemsSource="{Binding RecipeFiles}" SelectedItem="{Binding SelectedFile}" Margin="10" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <DataGrid.ItemContainerStyle>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="PreviewTouchDown" Handler="DataGridRow_PreviewTouchDown"/>
+                        <Setter Property="Height" Value="45"/>
+                    </Style>
+                </DataGrid.ItemContainerStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.View.RecipeName}" Binding="{Binding FileName}" Width="150"/>
+                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.View.Description}" Binding="{Binding Description}" Width="211"/>
+                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.View.LastChanged}" Binding="{Binding LastChanged}" Width="180"/>
+                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.View.ChangedBy}" Binding="{Binding WhoChanged}" Width="200"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <vw:Button Grid.Row="3" x:Name="LeftButton"  Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource FP_BlueButton}"  Margin="10,10,0,0" LocalizableText="@Rezeptverwaltung.Text7" Click="LeftButton_Click" AuthorizationRight="DataSelection"/>
+            <vw:Button Grid.Row="3" x:Name="RightButton"  Width="160" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource FP_RedButton}" Margin="0,10,10,0" Click="RightButton_Click" Text="" LocalizableText="@Rezeptverwaltung.Text8" />
+        </Grid>
+    </Border>
+</vw:View>
